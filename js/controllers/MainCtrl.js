@@ -1,10 +1,9 @@
 app.controller('MainCtrl',MainCtrl);
 
-function MainCtrl(productService, $uibModal,$scope){
+function MainCtrl(productService, $uibModal){
 	back_setting();
 	this.productService = productService;
 	this.$uibModal = $uibModal;
-	this.$scope = $scope;
 	this.getProducts();
 	
 }
