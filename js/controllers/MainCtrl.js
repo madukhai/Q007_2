@@ -6,7 +6,7 @@ function MainCtrl(productService, $uibModal,$scope){
 	this.$uibModal = $uibModal;
 	this.$scope = $scope;
 	this.getProducts();
-	
+	console.log(this.products);
 }
 
 MainCtrl.prototype.getProducts = function(){
