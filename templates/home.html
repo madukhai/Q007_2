@@ -1,3 +1,67 @@
-<h1>
-	Home Page
-</h1>
+
+<div class="trianglify"></div>
+<header>
+	<div class="nav-bar">
+		<div class="icon"></div>
+		<div class='sitetitle'>
+			<h2></h2>
+		</div>
+		<div class="category dropdown nav">dropdown</div>
+		<a ng-href="/#/login" class="login nav">login</a>
+		
+		<div class="cart_button nav">cart</div>
+		<form class="form-inline nav">
+		    <div class="form-group">
+		      
+		      	<input ng-model="ctrl.search" type="text" class="form-control" id="search" placeholder="search" ng-change="ctrl.resetPage()">
+		    </div>
+		  </form>
+	</div>
+</header>
+
+
+<!-- <div class="video-container row" id="player">
+   <video  autoplay="autoplay" loop="true" muted="muted" preload='preload' class="col-lg-12" control="true">
+		<source src="/videos/007trailer.mp4" type="video/mp4">		
+	</video>
+</div>
+<div class='outlay' ng-style="{'height': Ctrl.getVideoHeight()}">
+	{{ Ctrl.getVideoHeight() }}
+</div>	
+ -->
+
+
+
+
+
+
+<main class="product-container clearfix">
+	<div class="products">
+		<ul>
+			<li class="item" ng-repeat='product in Ctrl.products'>
+				<h1>{{ product.name }}</h1>
+				<p>{{ product.description}}</p>
+				<span>{{ product.price | currency}}</span>
+				<span>{{ product.category}}</span>
+				<span>{{ product.quantity}}</span>
+			</li>
+		</ul>
+	</div>
+	
+</main>
+
+<footer>
+	<h3>footer</h3>
+	<div class="ref-container container row">
+		<div class="references">
+			
+		</div>
+		<div class="references">
+			
+		</div>
+		<div class="references">
+			
+		</div>
+	</div>
+	
+</footer>

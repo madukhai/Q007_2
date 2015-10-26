@@ -1,6 +1,10 @@
 var app = angular.module('ShopApp',['ngRoute']);
 
 app.config(function($routeProvider,$httpProvider){
+
+	
+	
+
 	$routeProvider.when('/',{
 		templateUrl:'templates/home.html',
 		controller:'MainCtrl as Ctrl',
@@ -14,7 +18,10 @@ app.config(function($routeProvider,$httpProvider){
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
 			path:function($location){
+					
 					if(localStorage.getItem('authToken') == null){
+						console.log("222");
+						
 						$location.path('/login');
 					}
 				},
@@ -43,3 +50,14 @@ app.config(function($routeProvider,$httpProvider){
     };
   });
 });
+ 
+
+
+
+
+
+
+
+
+
+

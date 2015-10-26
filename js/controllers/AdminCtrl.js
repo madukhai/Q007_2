@@ -6,6 +6,6 @@ function AdminCtrl(productService,$location,products){
 	//services
 	this.productService = productService;
 	this.products = products;
-	console.log(this.products);
+	// console.log(this.products);
 
 }

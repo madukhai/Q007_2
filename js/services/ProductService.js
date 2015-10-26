@@ -10,7 +10,7 @@ function ProductService(api){
 
 ProductService.prototype.retrieveProducts = function(){
 	var self = this;
-	return this.api.request('/retrieve_products',{},'GET');
+	return this.api.request('/retrieve_products/team3',{},'GET');
 }
 
 ProductService.prototype.setProducts = function(products){
