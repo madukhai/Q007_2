@@ -14,7 +14,7 @@ AuthCtrl.prototype.authenticate = function(username,password){
 
 	this.api.request('/login',request_body,'POST')
 	.then(function(response) {
-      console.log(response);
+     
       if(response.data.authToken != 'Invalid Credentials' && response.data.authToken != null  ){
       	//reset local storage data
       	localStorage.removeItem('products');
