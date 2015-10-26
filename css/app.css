@@ -49,8 +49,9 @@ li.item{
 	margin: 20px;
 	padding: 10px;
 	overflow: auto;
-	background-color: rgba(200,200,200,0.5); 
+	background-color: rgba(200,200,200,1); 
 	z-index: 10;
+	
 }
 
 
