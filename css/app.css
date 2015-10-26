@@ -1,0 +1,117 @@
+header{
+	width:100%;
+	height:50px;
+}
+.nav{
+	float:right;
+	
+	margin-right: 30px;
+}
+
+.form-group{
+	
+	float: left;
+}
+/*
+	clearfix	
+*/
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+
+
+body{
+	background-color: black;
+}
+
+.container{
+	width: 95%;
+	margin: 0;
+}
+
+li.item{
+	display: block;
+	float:left;
+	width: 28%;
+	height: 400px;
+	margin: 20px;
+	padding: 10px;
+	overflow: auto;
+	background-color: rgba(200,200,200,0.5); 
+	z-index: 10;
+	
+	
+}
+
+
+
+
+/*
+	video fullscreen background
+*/
+.outlay{
+	width:100%;
+}
+.video-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    z-index: -1000;
+}
+.video-container video{
+	width: 100%;
+	margin: 0;
+	
+}
+
+/*
+	triangle
+*/
+
+.trianglify svg{
+	z-index: -100;
+	position: fixed;
+	top: 0;
+	left:0;
+	opacity: 0.3;
+}
+.trianglify svg path{
+	fill: transparent;
+	z-index: -100;
+}
+
+/*
+	triangle end
+*/
+
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.modal {
+	position: fixed;
+	top: 100px;
+	left: 35%;
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
+
