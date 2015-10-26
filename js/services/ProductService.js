@@ -44,3 +44,18 @@ ProductService.prototype.addProduct = function(product){
 			});;
 
 }
+
+/*
+Function to edit a product. returns a POST request to api /editproduct/:productId and a promise to update products list in localStorage.
+Parameters:
+product: object containing key/value pairs of product properties
+id: comes from product property: productId
+*/
+ProductService.prototype.editProduct = function(product,id){
+	console.log(product);
+	console.log(id);
+    return this.api.request('/editproduct/' + id,product,'POST')
+    .then(function(response){
+        console.log(response);
+    });
+}
