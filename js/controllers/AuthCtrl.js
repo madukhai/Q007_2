@@ -1,8 +1,9 @@
 app.controller('AuthCtrl',AuthCtrl);
 
-function AuthCtrl(api,$location){
+function AuthCtrl(api,$location, $modalInstance){
 	this.api = api;
 	this.$location = $location;
+  this.$modalInstance = $modalInstance;
 }
 AuthCtrl.prototype.authenticate = function(username,password){
 	var self = this;
@@ -25,3 +26,19 @@ AuthCtrl.prototype.authenticate = function(username,password){
     	
     });;
 }
+
+// angular.module('ui.bootstrap.demo').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+
+//   $scope.items = items;
+//   $scope.selected = {
+//     item: $scope.items[0]
+//   };
+
+//   $scope.ok = function () {
+//     $uibModalInstance.close($scope.selected.item);
+//   };
+
+//   $scope.cancel = function () {
+//     $uibModalInstance.dismiss('cancel');
+//   };
+// });

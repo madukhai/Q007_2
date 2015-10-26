@@ -7,7 +7,7 @@
 			<h2></h2>
 		</div>
 		<div class="category dropdown nav">dropdown</div>
-		<a ng-href="/#/login" class="login nav">login</a>
+		<button ng-click="Ctrl.open()" class="login nav">login</button>
 		
 		<div class="cart_button nav">cart</div>
 		<form class="form-inline nav">
@@ -20,8 +20,9 @@
 </header>
 
 
-<div class="video-container row" id="player">
-   <video  autoplay="autoplay" loop="true" muted="muted" preload='preload' class="col-lg-12" control="true">
+<div class="video-container row" id="player" posters>
+
+   <video  autoplay="autoplay" loop="true" muted="muted"  class="col-lg-12" control="true">
 		<source src="/videos/007trailer.mp4" type="video/mp4">		
 	</video>
 </div>

@@ -1,4 +1,5 @@
-var app = angular.module('ShopApp',['ngRoute']);
+var app = angular.module('ShopApp',[
+			'ngRoute','ui.bootstrap']);
 
 app.config(function($routeProvider,$httpProvider){
 
@@ -9,10 +10,10 @@ app.config(function($routeProvider,$httpProvider){
 		templateUrl:'templates/home.html',
 		controller:'MainCtrl as Ctrl',
 	})
-	.when('/login',{
-		templateUrl:'templates/login.html',
-		controller:'AuthCtrl as Ctrl'
-	})
+	// .when('/login',{
+	// 	templateUrl:'templates/login.html',
+	// 	controller:'AuthCtrl as Ctrl'
+	// })
 	.when('/admin',{
 		templateUrl:'templates/admin.html',
 		controller:'AdminCtrl as Ctrl',

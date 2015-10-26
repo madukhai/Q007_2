@@ -49,8 +49,9 @@ li.item{
 	margin: 20px;
 	padding: 10px;
 	overflow: auto;
-	background-color: rgba(200,200,200,1); 
+	background-color: rgba(200,200,200,0.5); 
 	z-index: 10;
+	
 	
 }
 
@@ -97,6 +98,17 @@ li.item{
 /*
 	triangle end
 */
+
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.modal {
+	position: fixed;
+	top: 100px;
+	left: 35%;
+	background-color: rgba(255,255,255,0.5);
+}
+
 
 
 
