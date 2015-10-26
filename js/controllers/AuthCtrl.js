@@ -25,6 +25,7 @@ AuthCtrl.prototype.authenticate = function(username,password){
     	console.log(response);
     	
     });;
+  this.$modalInstance.close();
 }
 
 // angular.module('ui.bootstrap.demo').controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
