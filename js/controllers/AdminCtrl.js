@@ -9,3 +9,10 @@ function AdminCtrl(productService,$location,products){
 	// console.log(this.products);
 
 }
+
+AdminCtrl.prototype.logout = function(){
+   localStorage.removeItem('products');
+   localStorage.removeItem('authToken');
+   console.log(localStorage);
+   self.$location.path('/login');
+}
