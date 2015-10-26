@@ -30,7 +30,6 @@ MainCtrl.prototype.open = function(){
     //     return $scope.items;
     //   }
     // }
-    scope: this.$scope.$new()
   }
   this.modalInstance = this.$uibModal.open(options);
 
