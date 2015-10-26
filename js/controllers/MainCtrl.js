@@ -1,10 +1,9 @@
 app.controller('MainCtrl',MainCtrl);
 
-function MainCtrl(productService, $uibModal,$scope){
+function MainCtrl(productService, $uibModal){
 	back_setting();
 	this.productService = productService;
 	this.$uibModal = $uibModal;
-	this.$scope = $scope;
 	this.getProducts();
 	console.log(this.products);
 }
@@ -31,16 +30,13 @@ MainCtrl.prototype.open = function(){
     //     return $scope.items;
     //   }
     // }
-    scope: this.$scope.$new()
   }
   this.modalInstance = this.$uibModal.open(options);
 
-  console.log(this.modalInstance);
-  this.modalInstance.result.then(function () {
-    console.log(modalInstance);
-  }, function () {
-    $log.info('Modal dismissed at: ' + new Date());
-  });
+  // console.log(this.modalInstance);
+  // this.modalInstance.result.then(function () {
+  //   console.log(modalInstance);
+  // });
 }
 
 
