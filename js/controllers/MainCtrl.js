@@ -35,7 +35,7 @@ MainCtrl.prototype.open = function(){
 
   // console.log(this.modalInstance);
   // this.modalInstance.result.then(function () {
-  //   console.log(modalInstance);
+  //   this.close(result);
   // });
 }
 
