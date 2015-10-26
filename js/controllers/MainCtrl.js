@@ -33,7 +33,7 @@ MainCtrl.prototype.open = function(){
   }
   this.modalInstance = this.$uibModal.open(options);
 
-  // console.log(this.modalInstance);
+   console.log(this.modalInstance);
   // this.modalInstance.result.then(function () {
   //   this.close(result);
   // });
