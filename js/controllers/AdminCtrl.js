@@ -2,6 +2,7 @@ app.controller('AdminCtrl',AdminCtrl);
 
 function AdminCtrl(productService,$location,products){
 	var self = this;
+	this.location = $location;
 
 	//services
 	this.productService = productService;
@@ -14,5 +15,5 @@ AdminCtrl.prototype.logout = function(){
    localStorage.removeItem('products');
    localStorage.removeItem('authToken');
    console.log(localStorage);
-   self.$location.path('/login');
+   this.location.path('/login');
 }

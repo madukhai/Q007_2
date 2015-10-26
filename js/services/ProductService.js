@@ -32,7 +32,7 @@ ProductService.prototype.getProducts = function(){
 		   });
 	}
 	else{
-		return JSON.parse(self.products);
+		//return JSON.parse(self.products);
 	}
 }
 ProductService.prototype.addProduct = function(product){
