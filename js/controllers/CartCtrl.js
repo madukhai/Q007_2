@@ -26,5 +26,5 @@ CartCtrl.prototype.close = function(){
 CartCtrl.prototype.Order = {};
 
 CartCtrl.prototype.upgradeCart = function(){
-	// add total,tax,fin
+	// add total,tax,final.
 }
