@@ -7,14 +7,21 @@
 			<h2></h2>
 		</div>
 		<div class="category dropdown nav">dropdown</div>
-		<button ng-click="Ctrl.open()" class="login nav">login</button>
+		<button ng-click="Ctrl.openLogin()" class="login nav">login</button>
 		
 		<button class="cart_button nav" ng-click="Ctrl.openCart()">cart</button>
 		
 		<form class="form-inline nav">
 		    <div class="form-group">
-		      
-		      	<input ng-model="ctrl.search" type="text" class="form-control" id="search" placeholder="search" ng-change="ctrl.resetPage()">
+		     	<input ng-model="Ctrl.search" 
+		     		   type="text" 
+		     		   class="form-control" 
+		     		   id="search" 
+		     		   placeholder="search">
+		     	
+		     	<select class="form-control" 
+		     			ng-options = "item as item.label for item in Ctrl.categoryOptions" 
+		     			ng-model = "Ctrl.categoryOption"></select>
 		    </div>
 		  </form>
 	</div>
@@ -27,7 +34,7 @@
 <!-- <<<<<<< Updated upstream -->
   <!--  <video  autoplay="autoplay" loop="true" muted="muted"  class="col-lg-12" control="true">
 =======
-   <!-- <video  autoplay="autoplay" loop="true" muted="muted" preload="preload" class="col-lg-12" control="true">
+   <! <video  autoplay="autoplay" loop="true" muted="muted" preload="preload" class="col-lg-12" control="true">
 >>>>>>> Stashed changes
 		<source src="/videos/007trailer.mp4" type="video/mp4">		
 	</video> -->
@@ -45,7 +52,10 @@
 <main class="product-container clearfix">
 	<div class="products">
 		<ul>
-			<li class="item" ng-repeat='product in Ctrl.products'>
+			<li class="item" ng-repeat='product in Ctrl.products
+										| filter : Ctrl.categoryOption.categoryFilter
+										| filter : Ctrl.search
+										| limitTo: Ctrl.productsPerPage:Ctrl.curPage*Ctrl.productsPerPage'>
 				<h1>{{ product.name }}</h1>
 				<p>{{ product.description}}</p>
 				<span>{{ product.price | currency}}</span>
@@ -55,9 +65,23 @@
 			</li>
 		</ul>
 	</div>
-	
 </main>
 
+<!--previous and next buttons for pagination :: Chandu-->
+<div class="pageination">
+	<button 
+	        ng-disabled = "Ctrl.curPage === 0"
+	        ng-click="Ctrl.curPage = Ctrl.curPage - 1">
+	        PREV    
+	</button>
+	<button 
+	        ng-disabled = "Ctrl.curPage === (Ctrl.getNumPages() - 1)"
+	        ng-click = "Ctrl.curPage = Ctrl.curPage + 1">
+	      	NEXT
+	</button>
+
+	page {{Ctrl.curPage + 1}} of {{Ctrl.getNumPages()}}
+</div>
 <footer>
 	<h3>footer</h3>
 	<div class="ref-container container row">
