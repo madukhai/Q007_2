@@ -71,7 +71,7 @@ li.item{
 */
 .outlay{
 	width:100%;
-	height: 650px;
+	height: 550px;
 }
 
 /*
@@ -144,6 +144,15 @@ iframe{
 }
 
 /**/
-button{
-	z-index: 90;
+.cover_ads{
+	position:absolute;
+	top: 560px;
+	width: 110%;
+	height: 100px;
+	background-color: black;
+	z-index: -1000;
 }
+
+
+
+
