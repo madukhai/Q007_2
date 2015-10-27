@@ -20,3 +20,6 @@ CartCtrl.prototype.checkOut = function(){
 CartCtrl.prototype.close = function(){
 	this.$modalInstance.close();
 }
+
+CartCtrl.prototype.Order = {};
+CartCtrl.prototype.cart = [];
