@@ -73,26 +73,13 @@ li.item{
 	width:100%;
 	height: 650px;
 }
-.video-container {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    z-index: 2;
-}
-.video-container video{
-	width: 100%;
-	margin: 0;
-	
-}
 
 /*
 	triangle
 */
 
 .trianglify svg{
-	z-index: 1;
+	z-index: -100;
 	position: fixed;
 	top: 0;
 	left:0;
@@ -157,3 +144,6 @@ iframe{
 }
 
 /**/
+button{
+	z-index: 90;
+}

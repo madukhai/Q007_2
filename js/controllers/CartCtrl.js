@@ -7,6 +7,8 @@ function CartCtrl($uibModal, $modalInstance,cart){
 	// console.log(this.cart);
 }
 
+
+
 CartCtrl.prototype.checkOut = function(){
 	var self = this;
 	var self = this;
