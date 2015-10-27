@@ -1,5 +1,17 @@
 <h1 ng-style="{'font-size': '6em', 'color':'white' }"> CheckOut</h1>
 <!-- show order details -->
+<div ng-repeat="product in Ctrl.cart">
 
-<button ng-click="Ctrl.confirm()">confirm</button>
+				{{ product.name }}
+				{{ product.price }}
+				{{ product.description }}
+			</div>
+			<div>
+				{{ Ctrl.total }}
+				{{ Ctrl.tax }}
+				{{ Ctrl.finalTotal }}
+
+			</div>
+
+<button ng-click="Ctrl.confirmOrder(Ctrl.cart, Ctrl.total, Ctrl.tax, Ctrl.finalTotal)">confirm</button>
 <button ng-click="Ctrl.close()">close</button>

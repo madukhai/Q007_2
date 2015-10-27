@@ -42,7 +42,7 @@ ProductService.prototype.addProduct = function(product){
 	return this.api.request('/newproduct',product,'POST')
 			.then(function(response){
 				console.log(response);
-			});;
+			});
 
 }
 

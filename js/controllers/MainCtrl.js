@@ -12,7 +12,7 @@ function MainCtrl(productService, $uibModal){
   this.productsPerPage = 6;
 
   this.categoryOptions = [
-    {label: "", categoryFilter: ""},
+    {label: "All", categoryFilter: ""},
     {label: "Firearms", categoryFilter : "Firearms"},
     {label: "Gadgets", categoryFilter : "Gadgets"},
     {label: "Concealed", categoryFilter : "Concealed"},
@@ -67,7 +67,6 @@ MainCtrl.prototype.openCart = function(){
 
 MainCtrl.prototype.cart = [];
 MainCtrl.prototype.addToCart = function(product){
-
   this.cart.push(product);
 }
 
