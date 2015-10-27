@@ -1,3 +1,75 @@
-<h1>
-	Home Page
-</h1>
+
+<div class="trianglify"></div>
+<header>
+	<div class="nav-bar">
+		<div class="icon"></div>
+		<div class='sitetitle'>
+			<h2></h2>
+		</div>
+		<div class="category dropdown nav">dropdown</div>
+		<button ng-click="Ctrl.open()" class="login nav">login</button>
+		
+		<button class="cart_button nav" ng-click="Ctrl.openCart()">cart</button>
+		
+		<form class="form-inline nav">
+		    <div class="form-group">
+		      
+		      	<input ng-model="ctrl.search" type="text" class="form-control" id="search" placeholder="search" ng-change="ctrl.resetPage()">
+		    </div>
+		  </form>
+	</div>
+</header>
+
+
+<!-- <div class="video-container row" id="player" > -->
+	<iframe  src="https://www.youtube.com/embed/LTDaET-JweU?autoplay=1&controls=0&autohide=1&loop=1&rel=0&showinfo=0&playlist=LTDaET-JweU" frameborder="0" allowfullscreen='allowfullscreen'></iframe>
+
+<!-- <<<<<<< Updated upstream -->
+  <!--  <video  autoplay="autoplay" loop="true" muted="muted"  class="col-lg-12" control="true">
+=======
+   <!-- <video  autoplay="autoplay" loop="true" muted="muted" preload="preload" class="col-lg-12" control="true">
+>>>>>>> Stashed changes
+		<source src="/videos/007trailer.mp4" type="video/mp4">		
+	</video> -->
+<!-- </div> -->
+<div class='outlay'>
+	
+</div>	
+
+
+
+
+
+
+
+<main class="product-container clearfix">
+	<div class="products">
+		<ul>
+			<li class="item" ng-repeat='product in Ctrl.products'>
+				<h1>{{ product.name }}</h1>
+				<p>{{ product.description}}</p>
+				<span>{{ product.price | currency}}</span>
+				<span>{{ product.category}}</span>
+				<span>{{ product.quantity}}</span>
+				<button ng-click="Ctrl.addToCart(product)">Add To</button>
+			</li>
+		</ul>
+	</div>
+	
+</main>
+
+<footer>
+	<h3>footer</h3>
+	<div class="ref-container container row">
+		<div class="references">
+			
+		</div>
+		<div class="references">
+			
+		</div>
+		<div class="references">
+			
+		</div>
+	</div>
+	
+</footer>
