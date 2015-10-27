@@ -37,14 +37,23 @@ MainCtrl.prototype.openCart = function(){
   var options = {
     animation:true,
     templateUrl: 'templates/cart.html',
-    controller: 'CartCtrl as Ctrl'
+    controller: 'CartCtrl as Ctrl',
+    resolve: {
+      cart: function(){
+         return self.cart;
+      }
+    }
   }
   this.modalInstance = this.$uibModal.open(options);
 
 
 }
 
-
+MainCtrl.prototype.cart = [];
+MainCtrl.prototype.addToCart = function(product){
+  
+  this.cart.push(product);
+}
 
 
 function back_setting(){

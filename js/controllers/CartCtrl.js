@@ -1,8 +1,10 @@
 app.controller('CartCtrl',CartCtrl);
 
-function CartCtrl($uibModal, $modalInstance){
+function CartCtrl($uibModal, $modalInstance,cart){
 	this.$uibModal = $uibModal;
 	this.$modalInstance = $modalInstance;
+	this.cart = cart;
+	// console.log(this.cart);
 }
 
 CartCtrl.prototype.checkOut = function(){
@@ -22,4 +24,4 @@ CartCtrl.prototype.close = function(){
 }
 
 CartCtrl.prototype.Order = {};
-CartCtrl.prototype.cart = [];
+
