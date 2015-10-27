@@ -5,7 +5,8 @@ function MainCtrl(productService, $uibModal){
 	this.productService = productService;
 	this.$uibModal = $uibModal;
 	this.getProducts();
-	console.log(this.products);
+  console.log(this.products);
+	console.log(typeof(this.products));
 
   this.curPage = 0;
   this.productsPerPage = 6;
@@ -23,7 +24,6 @@ function MainCtrl(productService, $uibModal){
 
 MainCtrl.prototype.getProducts = function(){
 	this.products = this.productService.getProducts();
-
 }
 
 

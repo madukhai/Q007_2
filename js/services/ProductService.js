@@ -28,6 +28,7 @@ ProductService.prototype.getProducts = function(){
 	if(this.products == null){
 		return this.retrieveProducts().then(function(response){
 				self.setProducts(response.data.products);
+				console.log(response.data.products);
 				return response.data.products;
 		   });
 	}
