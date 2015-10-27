@@ -1,20 +1,28 @@
-var app = angular.module('ShopApp',['ngRoute']);
+var app = angular.module('ShopApp',[
+			'ngRoute','ui.bootstrap']);
 
 app.config(function($routeProvider,$httpProvider){
+
+	
+	
+
 	$routeProvider.when('/',{
 		templateUrl:'templates/home.html',
 		controller:'MainCtrl as Ctrl',
 	})
-	.when('/login',{
-		templateUrl:'templates/login.html',
-		controller:'AuthCtrl as Ctrl'
-	})
+	// .when('/login',{
+	// 	templateUrl:'templates/login.html',
+	// 	controller:'AuthCtrl as Ctrl'
+	// })
 	.when('/admin',{
 		templateUrl:'templates/admin.html',
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
 			path:function($location){
+					
 					if(localStorage.getItem('authToken') == null){
+						console.log("222");
+						
 						$location.path('/login');
 					}
 				},
@@ -43,3 +51,14 @@ app.config(function($routeProvider,$httpProvider){
     };
   });
 });
+ 
+
+
+
+
+
+
+
+
+
+
