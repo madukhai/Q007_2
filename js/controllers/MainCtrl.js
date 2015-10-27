@@ -5,8 +5,7 @@ function MainCtrl(productService, $uibModal){
 	this.productService = productService;
 	this.$uibModal = $uibModal;
 	this.getProducts();
-  console.log(this.products);
-	console.log(typeof(this.products));
+  
 
   this.curPage = 0;
   this.productsPerPage = 6;
@@ -66,10 +65,34 @@ MainCtrl.prototype.openCart = function(){
 }
 
 MainCtrl.prototype.cart = [];
+
 MainCtrl.prototype.addToCart = function(product){
-  this.cart.push(product);
+  var index = findProduct(this.cart,product);
+ 
+  if(index == -1){
+    product.amount = 1;
+    this.cart.push(product);
+    
+  }else{
+    this.cart[index].amount++;
+    
+  }
+
 }
 
+function findProduct(cart, product){
+ 
+  var index = -1;
+  if(cart.length != 0){
+   for(var i=0;i<cart.length;i++){
+    if(product.productId == cart[i].productId){
+      index = i;
+      break;
+      }
+    }
+  }
+  return index;
+}
 
 function back_setting(){
   var pattern = Trianglify({

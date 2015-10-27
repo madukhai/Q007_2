@@ -48,7 +48,7 @@ CartCtrl.prototype.upgradeCart = function(){
 	if(this.cart.length != 0){
 		this.total = 0;
 		for(var i=0; i < this.cart.length; i++){
-			this.total += parseInt(this.cart[i].price);
+			this.total += parseInt(this.cart[i].price)*this.cart[i].amount;
 		}
 		this.tax = this.total*0.13;
 		this.finalTotal = this.tax + this.total;
