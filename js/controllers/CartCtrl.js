@@ -17,3 +17,6 @@ CartCtrl.prototype.checkOut = function(){
   	this.modalInstance = this.$uibModal.open(options);
   	
 }
+CartCtrl.prototype.close = function(){
+	this.$modalInstance.close();
+}
