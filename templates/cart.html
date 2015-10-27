@@ -1,0 +1,21 @@
+<div class="cart">
+	<div class="cart_content">
+		<h1 ng-style="{'font-size':'6em','color':'white'}">Cart</h1>
+			
+			<div ng-repeat="product in Ctrl.cart">
+
+				{{ product.name }}
+				{{ product.price }}
+				{{ product.description }}
+			</div>
+			<div>
+				{{ Ctrl.total }}
+				{{ Ctrl.tax }}
+				{{ Ctrl.finalTotal }}
+
+			</div>
+				
+		<button class="toCheckout" ng-click="Ctrl.checkOut()">Checkout</button>
+		<button ng-click="Ctrl.close()">close</button>
+	</div>
+</div>
