@@ -46,12 +46,11 @@ MainCtrl.prototype.openCart = function(){
   }
   this.modalInstance = this.$uibModal.open(options);
 
-
 }
 
 MainCtrl.prototype.cart = [];
 MainCtrl.prototype.addToCart = function(product){
-  
+
   this.cart.push(product);
 }
 
