@@ -3,6 +3,7 @@ function CheckOutCtrl($modalInstance, order, OrderService){
 	this.$modalInstance = $modalInstance;
 	this.order = order;
 	this.OrderService = OrderService;
+	console.log(this.order);
 }
 
 

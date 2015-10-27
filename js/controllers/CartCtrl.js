@@ -26,7 +26,7 @@ CartCtrl.prototype.checkOut = function(){
 	    controller: 'CheckOutCtrl as Ctrl',
 	    resolve: {
 	    	order: function(){
-	    		return self.oder;
+	    		return self.order;
 	    	}
 	    }
   	}
