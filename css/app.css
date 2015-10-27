@@ -79,8 +79,7 @@ li.item{
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: black;
-    z-index: -1000;
+    z-index: 2;
 }
 .video-container video{
 	width: 100%;
@@ -93,7 +92,7 @@ li.item{
 */
 
 .trianglify svg{
-	z-index: -100;
+	z-index: 1;
 	position: fixed;
 	top: 0;
 	left:0;
