@@ -25,7 +25,7 @@ EditProductCtrl.prototype.getProduct = function(id) {
 }
 
 EditProductCtrl.prototype.editProduct = function(){
-    //var self = this;
+    var self = this;
     
 
     var request_body = {
@@ -39,6 +39,10 @@ EditProductCtrl.prototype.editProduct = function(){
     
     console.log(request_body);
     console.log(this.productId);
-    this.productService.editProduct(request_body, this.productId);
+    this.productService.editProduct(request_body, this.productId)
+
+    // .then(self.productService.getProducts());
+
+    this.location.path('/admin')
 }
 

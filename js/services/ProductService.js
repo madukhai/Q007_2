@@ -56,7 +56,7 @@ ProductService.prototype.editProduct = function(product,id){
 	console.log(product);
 	console.log(id);
     return this.api.request('/editproduct/' + id,product,'POST')
-    .then(function(response){
-        console.log(response);
-    });
+    // .then(function(response){
+    //     console.log(response);
+    // });
 }
