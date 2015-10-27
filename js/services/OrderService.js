@@ -1,7 +1,7 @@
 app.service('OrderService', OrderService);
 
 function OrderService(api) {
-	this.api;
+	this.api = api;
 }
 
 OrderService.prototype.confirmOrder = function(order) {
@@ -9,6 +9,8 @@ OrderService.prototype.confirmOrder = function(order) {
 	// return an order
 	return this.api.request('/record_order', order, 'POST')
 	.then(function(response){
+		console.log(response);
+	},function(response){
 		console.log(response);
 	});
 }
