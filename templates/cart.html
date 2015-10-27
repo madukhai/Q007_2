@@ -4,14 +4,12 @@
 
 			<div ng-repeat="product in Ctrl.cart">
 
-				{{ product.name }}
-				{{ product.price }}
-				{{ product.description }}
+				{{ product.name }}       {{ product.price|currency }}  
 			</div>
 			<div>
-				{{ Ctrl.total }}
-				{{ Ctrl.tax }}
-				{{ Ctrl.finalTotal }}
+				total: {{ Ctrl.total |currency}}<br>
+				tax: {{ Ctrl.tax |currency}}<br>
+				final total: {{ Ctrl.finalTotal |currency}}
 
 			</div>
 				
