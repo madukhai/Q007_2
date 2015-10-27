@@ -127,6 +127,26 @@ li.item{
 	background-color: rgba(255,255,255,0.2);
 }
 
+.cart_content{
+	position: fixed;
+	top: 100px;
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	left:0;
+	right: 0;
+	z-index: 100;
+	padding: 30px;
+	background-color: rgba(255,255,255,0.2);
+}
 
+iframe{
+	width:100%;
+	height: 100%;
+	z-index: -1000;
+	position: absolute;
+	top:0;
+	margin:0;
+}
 
 

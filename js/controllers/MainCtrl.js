@@ -5,7 +5,7 @@ function MainCtrl(productService, $uibModal){
 	this.productService = productService;
 	this.$uibModal = $uibModal;
 	this.getProducts();
-	console.log(this.products);
+	// console.log(this.products);
 }
 
 MainCtrl.prototype.getProducts = function(){
@@ -25,21 +25,24 @@ MainCtrl.prototype.open = function(){
     animation: true,
     templateUrl: 'templates/login.html',
     controller: 'AuthCtrl as Ctrl',
-     // resolve: {
-    //   items: function () {
-    //     return $scope.items;
-    //   }
-    // }
+    
   }
   this.modalInstance = this.$uibModal.open(options);
 
-   console.log(this.modalInstance);
-  // this.modalInstance.result.then(function () {
-  //   this.close(result);
-  // });
+  
 }
 
+MainCtrl.prototype.openCart = function(){
+  var self = this;
+  var options = {
+    animation:true,
+    templateUrl: 'templates/cart.html',
+    controller: 'CartCtrl as Ctrl'
+  }
+  this.modalInstance = this.$uibModal.open(options);
 
+
+}
 
 
 
@@ -72,38 +75,7 @@ function back_setting(){
 
 
 	
-// angular.module('ui.bootstrap.demo').controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
 
-//   $scope.items = ['item1', 'item2', 'item3'];
-
-//   $scope.animationsEnabled = true;
-
-//   $scope.open = function (size) {
-
-//     var modalInstance = $uibModal.open({
-//       animation: $scope.animationsEnabled,
-//       templateUrl: 'myModalContent.html',
-//       controller: 'ModalInstanceCtrl',
-//       size: size,
-//       resolve: {
-//         items: function () {
-//           return $scope.items;
-//         }
-//       }
-//     });
-
-//     modalInstance.result.then(function (selectedItem) {
-//       $scope.selected = selectedItem;
-//     }, function () {
-//       $log.info('Modal dismissed at: ' + new Date());
-//     });
-//   };
-
-//   $scope.toggleAnimation = function () {
-//     $scope.animationsEnabled = !$scope.animationsEnabled;
-//   };
-
-// });
 
 
 
