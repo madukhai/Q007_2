@@ -1,0 +1,35 @@
+<section class="adminContainer">
+    <div class="innerContainer">
+            <h1 class="centreText">Store Admin Page</h1>
+            <!-- <hr> -->
+            <nav class="nav">
+                <ul>
+                    <li><a href="/#/view_orders" ng-click="Ctrl.getOrder()">View Orders</a></li>
+                </ul>
+            </nav>
+    
+            <!-- <hr> -->
+    
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                    
+                        <th><strong>Order ID</strong></th>
+                        <!-- <th><strong>Cart</strong></th> -->
+                        <th><strong>Total</strong></th>
+                        <th><strong>Tax</strong></th>
+                        <th><strong>Final Total</strong></th>
+                    </tr>
+                    <tr ng-repeat="order in Ctrl.order">
+                        <td>{{order.orderId}}</td>
+                        <!-- <td><ul><li ng-repeat="item in order.cart">{{item}}</li></ul>ul</td> -->
+                        <td>{{order.total}}</td>
+                        <td>{{order.tax}}</td>
+                        <td>{{order.final_total}}</td>
+                    </tr>
+                </thead>
+    
+            </table>
+        </div>
+<!-- End Container -->
+</section> 
