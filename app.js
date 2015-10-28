@@ -40,6 +40,11 @@ app.config(function($routeProvider,$httpProvider){
 		controller:'ProductCtrl as Ctrl'
 	})
 
+	.when('/view_orders',{
+		templateUrl:'templates/view_orders.html',
+		controller:'ViewOrderCtrl as Ctrl'
+	})
+
     .when('/edit_product/:productId',{
         templateUrl:'templates/edit_product.html',
         controller: 'EditProductCtrl as Ctrl',

@@ -16,11 +16,11 @@ OrderService.prototype.confirmOrder = function(order) {
 	});
 }
 
-ProductService.prototype.setOrder = function(order){
+OrderService.prototype.setOrder = function(order){
 	//store the products in local storage so you don't have to make an API
 	//request each time you are on this page.
-	localStorage.setItem('order',JSON.stringify(order));
-	this.order = order;
+	this.order = JSON.stringify(order);
+	localStorage.setItem('order',this.order);
 }
 
 OrderService.prototype.retrieveOrder = function(){
@@ -35,12 +35,19 @@ OrderService.prototype.getOrder = function(){
 	//and pass back the products as a promise
 	if(this.order == null){
 		return this.retrieveOrder().then(function(response){
+				console.log(response);
 				self.setOrder(response.data.order);
-				console.log(response.data.order);
+				
 				return response.data.order;
 		   });
 	}
 	else{
-		return JSON.parse(self.order);
+		if(typeof self.order === 'string'){
+			console.log(self.order);
+			return JSON.parse(self.order);
+		}
+		else{
+			return self.order;
+		}
 	}
 }

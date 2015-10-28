@@ -4,7 +4,7 @@ function ViewOrderCtrl(OrderService,$location,$routeParams){
     this.location = $location;
     this.orderId = $routeParams.orderId;
     this.orderService = OrderService;
-    this.getOrder();
+    // this.getOrder();
 }
 
 
