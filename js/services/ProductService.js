@@ -21,6 +21,7 @@ ProductService.prototype.setProducts = function(products){
 
 	localStorage.setItem('products',JSON.stringify(products));
 	this.products = products;
+
 }
 
 ProductService.prototype.getProducts = function(){
@@ -28,28 +29,29 @@ ProductService.prototype.getProducts = function(){
 	//if there are no products stored in localStorage
 	//grab them from the API,store them in localStorage
 	//and pass back the products as a promise
-	if(this.products == null){
+	// if(this.products == null){
 		console.log('3');
+		
 		return this.retrieveProducts().then(function(response){
 				self.setProducts(response.data.products);
 				console.log(response.data.products);
 				return response.data.products;
 		   });
-	}
-	else{
-		var res;
-		if(typeof(this.products) == 'string'){
-			// console.log(self.products);
-			console.log('1');
+	// }
+	// else{
+	// 	var res;
+	// 	if(typeof(this.products) == 'string'){
+	// 		// console.log(self.products);
+	// 		console.log('1');
 
-			res = JSON.parse(self.products);
-			console.log(res);
-			return res;
+	// 		res = JSON.parse(self.products);
+	// 		console.log(res);
+	// 		return res;
 			
-		}else{
-			console.log('2');
-			return this.products;
-		}
+	// 	}else{
+	// 		console.log('2');
+	// 		return this.products;
+	// 	}
 		// console.log(res);
 		// return this.retrieveProducts().then(function(response){
 		// 		self.setProducts(response.data.products);
@@ -57,7 +59,7 @@ ProductService.prototype.getProducts = function(){
 		// 		return response.data.products;
 		// 	});
 			
-	}	
+	// }	
 }
 ProductService.prototype.addProduct = function(product){
  	//TODO: add the new product to the current product list and

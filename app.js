@@ -8,8 +8,12 @@ app.config(function($routeProvider,$httpProvider){
 
 	$routeProvider.when('/',{
 		templateUrl:'templates/home.html',
-		controller:'MainCtrl as Ctrl'
-
+		controller:'MainCtrl as Ctrl',
+		resolve:{
+			products: function(productService){
+				return productService.getProducts();
+			}
+		}
 	})
 	
 	.when('/admin',{
