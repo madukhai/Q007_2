@@ -9,6 +9,11 @@ app.config(function($routeProvider,$httpProvider){
 	$routeProvider.when('/',{
 		templateUrl:'templates/home.html',
 		controller:'MainCtrl as Ctrl',
+		resolve:{
+			products: function(productService){
+				return productService.getProducts();
+			}
+		}
 	})
 	
 	.when('/admin',{
@@ -18,12 +23,14 @@ app.config(function($routeProvider,$httpProvider){
 			path:function($location){
 					
 					if(localStorage.getItem('authToken') == null){
-						console.log("222");
+						
 						
 						$location.path('/login');
 					}
 				},
 			products:function(productService){
+					// console.log(productService.getProducts());
+
 					return productService.getProducts();
 				}
 			}
@@ -43,6 +50,7 @@ app.config(function($routeProvider,$httpProvider){
                 }
             },
             products:function(productService){
+ 
                 return productService.getProducts();
             }
         }

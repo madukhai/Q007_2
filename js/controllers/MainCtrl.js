@@ -1,12 +1,11 @@
 app.controller('MainCtrl',MainCtrl);
 
-function MainCtrl(productService, $uibModal){
+function MainCtrl(productService, $uibModal,products){
 	back_setting();
 	this.productService = productService;
 	this.$uibModal = $uibModal;
-	this.getProducts();
-  
-
+	this.products = products;
+  console.log(this.products);
   this.curPage = 0;
   this.productsPerPage = 6;
 
@@ -22,9 +21,7 @@ function MainCtrl(productService, $uibModal){
   this.categoryOption = this.categoryOptions[0];
 }
 
-MainCtrl.prototype.getProducts = function(){
-	this.products = this.productService.getProducts();
-}
+
 
 
 MainCtrl.prototype.getVideoHeight = function (){

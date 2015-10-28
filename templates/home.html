@@ -41,9 +41,14 @@
 <main class="product-container clearfix">
 	<div class="products">
 		<ul>
+<<<<<<< HEAD
 			<li class="item" ng-repeat="product in Ctrl.products
 										| filter: {category:Ctrl.categoryOption.categoryFilter}
 									    | filter : Ctrl.search
+=======
+			<li class="item" ng-repeat="product in Ctrl.products.slice(Ctrl.curPage * Ctrl.productsPerPage,(Ctrl.curPage+1) * Ctrl.productsPerPage)
+									 
+>>>>>>> 18b6c77d61d9dbd60611065fc84193feda9dd903
 										">
 <!-- 
 
