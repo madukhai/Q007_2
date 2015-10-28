@@ -12,7 +12,7 @@ function EditProductCtrl(productService,$location,$routeParams,products){
     this.productService = productService;
    
     console.log(this.productId);
-    this.product = this.getProduct(this.productId)
+    this.product = this.getProduct()
 
 }
 

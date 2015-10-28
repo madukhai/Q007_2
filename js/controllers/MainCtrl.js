@@ -6,7 +6,6 @@ function MainCtrl(productService, $uibModal){
 	this.$uibModal = $uibModal;
 	this.getProducts();
   
-
   this.curPage = 0;
   this.productsPerPage = 6;
 

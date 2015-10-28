@@ -7,10 +7,11 @@ ProductCtrl.prototype.addProduct = function(){
 	//create the api request that makes the product on the backend
 	//as part of your response you need to add it to your current
 	//product array using the product service
-	if(price==null){
-		price = 0;
+	console.log(this.price);
+	if(this.price==null){
+		this.price = 0;
 	}
-	console.log(price);
+	
 	var self = this;
 	var request_body = {
 		name:self.name,

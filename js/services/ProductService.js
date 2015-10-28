@@ -5,6 +5,8 @@ function ProductService(api){
 	this.api = api;
 
 	this.products = localStorage.getItem('products');
+
+	// console.log(this.products);
 }
 
 
@@ -37,24 +39,25 @@ ProductService.prototype.getProducts = function(){
 	else{
 		var res;
 		if(typeof(this.products) == 'string'){
+			// console.log(self.products);
 			console.log('1');
+
 			res = JSON.parse(self.products);
 			console.log(res);
+			return res;
+			
 		}else{
 			console.log('2');
-			res = this.products;
+			return this.products;
 		}
 		// console.log(res);
-		return this.retrieveProducts().then(function(response){
-				self.setProducts(response.data.products);
-				console.log(response.data.products);
-				return response.data.products;
-			});
+		// return this.retrieveProducts().then(function(response){
+		// 		self.setProducts(response.data.products);
+		// 		console.log(response.data.products);
+		// 		return response.data.products;
+		// 	});
 			
-	}
-		
-		
-	
+	}	
 }
 ProductService.prototype.addProduct = function(product){
  	//TODO: add the new product to the current product list and
