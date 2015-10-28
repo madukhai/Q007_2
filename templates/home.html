@@ -43,7 +43,7 @@
 		<ul>
 			<li class="item" ng-repeat="product in Ctrl.products
 										| filter: {category:Ctrl.categoryOption.categoryFilter}
-									    | filter : Ctrl.search">
+									    | filter: {name:Ctrl.search}">
 <!-- 
 PAST WORK:
 .slice(Ctrl.curPage * Ctrl.productsPerPage,(Ctrl.curPage+1) * Ctrl.productsPerPage)
