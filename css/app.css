@@ -52,7 +52,7 @@ body{
 li.item{
 	display: block;
 	float:left;
-	width: 28%;
+	width: 40%;
 	height: 400px;
 	margin: 20px;
 	padding: 10px;
@@ -156,6 +156,29 @@ iframe{
 	background-color: black;
 	z-index: -1000;
 }
+
+.item span{
+	font-size: 0.8em;
+}
+p.product-name{
+	font-size: 2em;
+	text-align: center;
+}
+
+.item button{
+	float:right;
+}
+.item .img-container{
+	width: 60%;
+	height: 60%;
+	margin:0 auto;
+}
+.item .simple-details{
+	display: inline-block;
+}
+
+
+
 
 
 

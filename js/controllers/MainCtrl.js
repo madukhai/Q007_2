@@ -78,6 +78,26 @@ MainCtrl.prototype.addToCart = function(product){
 
 }
 
+MainCtrl.prototype.showMoreDetails = function(product){
+  
+  var options = {
+    animation:true,
+    templateUrl: 'templates/productDetails.html',
+    controller: 'DetailsCtrl as Ctrl',
+    resolve: {
+      product: function(){
+         return product;
+      }
+    }
+  }
+  this.modalInstance = this.$uibModal.open(options);
+}
+
+
+
+
+
+
 function findProduct(cart, product){
  
   var index = -1;

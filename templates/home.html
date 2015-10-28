@@ -43,7 +43,7 @@
 		<ul>
 			<li class="item" ng-repeat="product in Ctrl.products
 										| filter: {category:Ctrl.categoryOption.categoryFilter}
-									    | filter: {name:Ctrl.search}">
+									    | filter: {name:Ctrl.search}" ng-click="Ctrl.showMoreDetails(product)">
 <!-- 
 PAST WORK:
 .slice(Ctrl.curPage * Ctrl.productsPerPage,(Ctrl.curPage+1) * Ctrl.productsPerPage)
@@ -51,13 +51,19 @@ PAST WORK:
 										| filter : {product.category:Ctrl.categoryOption.categoryFilter}
 										| filter : Ctrl.search -->
 
-				<h1>{{ product.name }}</h1>
-				<p>{{ product.description}}</p>
-				<span>{{ product.price | currency}}</span>
-				<span>{{ product.category}}</span>
-				<span>{{ product.quantity}}</span>
-				<button ng-click="Ctrl.addToCart(product)">Add To</button>
+				<p class="product-name">{{ product.name }}</p><br>
+				<div class="img-container">
+					<img ng-src="product.image" alt="product.name" /><br>
+				</div>
 				
+				
+				<div class="simple-details">
+					<span class="price">{{ product.price | currency}}</span>
+					<br>
+					<span class="category">catagory: {{ product.category}}</span>
+					<span class="quantity">{{ product.quantity}} left!</span>
+				</div>
+				<button ng-click="Ctrl.addToCart(product)">Add To</button>
 			</li>
 		</ul>
 	</div>
