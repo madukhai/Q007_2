@@ -8,12 +8,11 @@ function AdminCtrl(productService,$location,products){
 	this.productService = productService;
 	this.products = products;
 	// console.log(this.products);
-
 }
 
 AdminCtrl.prototype.logout = function(){
-   localStorage.removeItem('products');
+   // localStorage.removeItem('products');
    localStorage.removeItem('authToken');
    console.log(localStorage);
-   this.location.path('/login');
+   this.location.path('/home');
 }

@@ -24,6 +24,7 @@ app.config(function($routeProvider,$httpProvider){
 					}
 				},
 			products:function(productService){
+					// console.log(productService.getProducts());
 					return productService.getProducts();
 				}
 			}
@@ -43,6 +44,7 @@ app.config(function($routeProvider,$httpProvider){
                 }
             },
             products:function(productService){
+ 
                 return productService.getProducts();
             }
         }
