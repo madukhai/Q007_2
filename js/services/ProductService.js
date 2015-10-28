@@ -30,11 +30,11 @@ ProductService.prototype.getProducts = function(){
 	//grab them from the API,store them in localStorage
 	//and pass back the products as a promise
 	// if(this.products == null){
-		console.log('3');
+		// console.log('3');
 		
 		return this.retrieveProducts().then(function(response){
 				self.setProducts(response.data.products);
-				console.log(response.data.products);
+				// console.log(response.data.products);
 				return response.data.products;
 		   });
 	// }

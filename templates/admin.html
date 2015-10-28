@@ -24,7 +24,7 @@
                         <th><strong>Edit</strong></th>
                     </tr>
                     <tr ng-repeat="product in Ctrl.products">
-                        <td><img src = "{{product.image}}" class = "thumb_image"></td>
+                        <td><img ng-src = "{{product.image}}" class = "thumb_image"></td>
                         <td>{{product.name}}</td>
                         <td>{{product.description}}</td>
                         <td>{{product.price}}</td>

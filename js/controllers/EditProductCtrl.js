@@ -11,7 +11,7 @@ function EditProductCtrl(productService,$location,$routeParams,products){
     //services
     this.productService = productService;
    
-    console.log(this.productId);
+    // console.log(this.productId);
     this.product = this.getProduct()
 
 }
@@ -19,7 +19,7 @@ function EditProductCtrl(productService,$location,$routeParams,products){
 EditProductCtrl.prototype.getProduct = function() {
     var path_array = this.location.path().split('/');
     var id = path_array[path_array.length - 1];
-    console.log('getProduct' + id);
+    // console.log('getProduct' + id);
     for(var i=0;i<this.products.length;i++){
         if(this.products[i].productId == id){
             return this.products[i];
@@ -33,18 +33,19 @@ EditProductCtrl.prototype.getProduct = function() {
 EditProductCtrl.prototype.editProduct = function(){
     var self = this;
     
-
+    console.log(this.product.image);
     var request_body = {
         name:this.product.name,
         description:this.product.description,
         price:this.product.price,
         category:this.product.category,
         quantity:this.product.quantity,
-        status:this.product.status
+        status:this.product.status,
+        image:this.product.image
     }
     
     console.log(request_body);
-    console.log(this.productId);
+    // console.log(this.productId);
     this.productService.editProduct(request_body, this.productId);
     // this.products = this.productService.getProducts();
     // console.log(this.products);

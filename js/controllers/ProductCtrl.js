@@ -19,7 +19,8 @@ ProductCtrl.prototype.addProduct = function(){
 		price:self.price,
 		category:self.category,
 		quantity:self.quantity,
-		status:self.status
+		status:self.status,
+		image: self.image
 	}
 
 	this.productService.addProduct(request_body);
