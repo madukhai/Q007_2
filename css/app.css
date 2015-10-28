@@ -67,7 +67,7 @@ li.item{
 	display: block;
 	float:left;
 	width: 40%;
-	height: 400px;
+	height: 450px;
 	margin: 20px;
 	padding: 10px;
 	overflow: auto;
@@ -184,10 +184,17 @@ p.product-name{
 	float:right;
 }
 .item .img-container{
-	width: 60%;
-	height: 60%;
-	margin:0 auto;
+	width: 100%;
+	height: 50%;
+	padding: 0;
+	margin:0;
 }
+
+.item img{
+	width: 100%;
+	height: auto;
+}
+
 .item .simple-details{
 	display: inline-block;
 }
