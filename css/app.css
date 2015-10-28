@@ -162,10 +162,18 @@ iframe{
 	margin:0;
 }
 
+
+.video-stuff{
+	height:650px;
+	margin-bottom:0;
+}
+main{
+	margin-top:0;
+}
 /**/
 .cover_ads{
-	position:absolute;
-	top: 650px;
+	position:relative;
+	top: 600px;
 	width: 100%;
 	height: 500px;
 	background-color: black;
