@@ -4,8 +4,8 @@
 	<div ng-repeat="product in Ctrl.order.cart">
 
 					{{ product.name }}
-					{{ product.price }}
-					{{ product.description }}
+					{{ product.price | currency}}
+					
 				</div>
 				<div>
 					{{ Ctrl.total }}
