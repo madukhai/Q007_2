@@ -43,7 +43,8 @@
 		<ul>
 			<li class="item" ng-repeat="product in Ctrl.products
 										| filter: {category:Ctrl.categoryOption.categoryFilter}
-									    | filter: {name:Ctrl.search}">
+									    | filter: {name:Ctrl.search}"
+							 ng-show = 'product.status == "active"'>
 <!-- 
 PAST WORK:
 .slice(Ctrl.curPage * Ctrl.productsPerPage,(Ctrl.curPage+1) * Ctrl.productsPerPage)
@@ -52,6 +53,7 @@ PAST WORK:
 										| filter : Ctrl.search -->
 
 				<h1>{{ product.name }}</h1>
+				<img src = "{{product.image}}" class = "display_image">
 				<p>{{ product.description}}</p>
 				<span>{{ product.price | currency}}</span>
 				<span>{{ product.category}}</span>

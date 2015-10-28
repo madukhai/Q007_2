@@ -157,6 +157,15 @@ iframe{
 	z-index: -1000;
 }
 
+.thumb_image{
+	height:50px;
+	width:50px; 
+}
+.display_image{
+	height:250px;
+	width:400px;
+}
+
 
 
 

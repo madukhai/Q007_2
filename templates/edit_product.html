@@ -13,6 +13,8 @@
                 <section class="twelve columns">
                     <label for="description">Description: {{Ctrl.product.description}}</label>
                     <textarea id="description" class="u-full-width" ng-model="Ctrl.product.description"></textarea>
+                    <label for = "image">Image URL: <img src = "{{Ctrl.product.image}}" class = "display_image"></label>
+                    <input id = "image" class "u-full-width" type = "text" ng-model = "Ctrl.product.image"> 
                 </section>
                 <section class="twelve columns">
                     <label for="price">Price: ${{Ctrl.product.price}}</label>
