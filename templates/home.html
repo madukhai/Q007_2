@@ -21,6 +21,7 @@
 		     	<select class="form-control" 
 		     			ng-options = "item as item.label for item in Ctrl.categoryOptions" 
 		     			ng-model = "Ctrl.categoryOption"></select>
+		     			{{Ctrl.categoryOption.categoryFilter}}
 		    </div>
 		  </form>
 	</div>
@@ -40,10 +41,17 @@
 <main class="product-container clearfix">
 	<div class="products">
 		<ul>
-			<li class="item" ng-repeat="product in Ctrl.products.slice(Ctrl.curPage * Ctrl.productsPerPage,(Ctrl.curPage+1) * Ctrl.productsPerPage)
-										| filter : {product.category:Ctrl.categoryOption.categoryFilter}
-										| filter : Ctrl.search
+			<li class="item" ng-repeat="product in Ctrl.products
+										| filter: {category:Ctrl.categoryOption.categoryFilter}
+									    | filter : Ctrl.search
 										">
+<!-- 
+
+.slice(Ctrl.curPage * Ctrl.productsPerPage,(Ctrl.curPage+1) * Ctrl.productsPerPage)
+{product.category:Ctrl.categoryOption.categoryFilter} < original category filter by product category value
+										| filter : {product.category:Ctrl.categoryOption.categoryFilter}
+										| filter : Ctrl.search -->
+
 				<h1>{{ product.name }}</h1>
 				<p>{{ product.description}}</p>
 				<span>{{ product.price | currency}}</span>
@@ -57,6 +65,7 @@
 </main>
 
 <!--previous and next buttons for pagination :: Chandu-->
+<!-- Pagination quoted out for now
 <div class="pageination">
 	<button 
 	        ng-disabled = "Ctrl.curPage === 0"
@@ -71,7 +80,7 @@
 
 	page {{Ctrl.curPage + 1}} of {{Ctrl.getNumPages()}}
 
-</div>
+</div> -->
 <footer>
 	<h3>footer</h3>
 	<div class="ref-container container row">

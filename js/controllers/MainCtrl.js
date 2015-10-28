@@ -12,6 +12,7 @@ function MainCtrl(productService, $uibModal){
 
   this.categoryOptions = [
     {label: "All", categoryFilter: ""},
+    {label: "the fucking fingerprints", categoryFilter: "False"},
     {label: "Firearms", categoryFilter : "Firearms"},
     {label: "Gadgets", categoryFilter : "Gadgets"},
     {label: "Concealed", categoryFilter : "Concealed"},
