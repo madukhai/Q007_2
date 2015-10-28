@@ -121,7 +121,8 @@ li.item{
 	background-color: rgba(255,255,255,0.2);
 }
 
-.cart_content, .checkout_content{
+.cart_content, .checkout_content,.more-details{
+
 	position: fixed;
 	top: 100px;
 	width: 800px;
@@ -177,7 +178,10 @@ p.product-name{
 	display: inline-block;
 }
 
-
+.more-details{
+	background-color: rgba(255,255,255,0.8);
+	margin: 50px;
+}
 
 
 
