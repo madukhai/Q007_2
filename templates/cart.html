@@ -4,11 +4,13 @@
 
 			<div ng-repeat="product in Ctrl.cart">
 				<div>	
-					<strong>Item:</strong> {{ product.name }}   <strong>Quantity:</strong> {{product.amount}}
+					<strong>Item:</strong> {{ product.name }}   
 					<strong>Price</strong>   {{ product.price|currency }}  
 				</div>
 				<div>
+					<strong>Quantity:</strong>
 					<button ng-click = "Ctrl.updateAmount('addition', product)">+</button>
+					<input type="text" ng-model="product.amount">{{product.amount}}
 					<button ng-click = "Ctrl.updateAmount('subtraction', product)"
 							ng-disabled = "product.amount <= 0">-</button>
 				</div>

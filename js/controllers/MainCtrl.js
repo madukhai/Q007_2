@@ -11,11 +11,9 @@ function MainCtrl(productService, $uibModal,products){
 
   this.categoryOptions = [
     {label: "All", categoryFilter: ""},
-    {label: "the fucking fingerprints", categoryFilter: "False"},
-    {label: "Firearms", categoryFilter : "Firearms"},
-    {label: "Gadgets", categoryFilter : "Gadgets"},
-    {label: "Concealed", categoryFilter : "Concealed"},
-    {label: "Guns", categoryFilter : "Guns"}
+    {label: "Firearms", categoryFilter : "Weapons"},
+    {label: "Concealables", categoryFilter : "Undercover"},
+    {label: "Vehicles", categoryFilter : "Vehicle"}
   ]
 
   this.categoryOption = this.categoryOptions[0];
