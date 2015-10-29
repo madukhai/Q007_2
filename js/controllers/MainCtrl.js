@@ -13,7 +13,7 @@ function MainCtrl(productService, $uibModal,products){
 
   this.categoryOptions = [
     {label: "All", categoryFilter: ""},
-    {label: "Firearms", categoryFilter : "Weapons"},
+    {label: "Weapons", categoryFilter : "Weapons"},
     {label: "Concealables", categoryFilter : "Undercover"},
     {label: "Vehicles", categoryFilter : "Vehicle"}
   ]

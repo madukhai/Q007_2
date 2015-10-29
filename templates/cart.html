@@ -8,11 +8,21 @@
 					<strong>Price</strong>   {{ product.price|currency }}  
 				</div>
 				<div>
-					<strong>Quantity:</strong>
-					<button ng-click = "Ctrl.updateAmount('addition', product)">+</button>
-					<input type="text" ng-model="product.amount">
-					<button ng-click = "Ctrl.updateAmount('subtraction', product)"
-							ng-disabled = "product.amount <= 0">-</button>
+					<form name = "quantity_form">
+						<strong>Quantity:</strong>
+						<button ng-click = "Ctrl.updateAmount('addition', product)"
+								ng-disabled = "quantity_form.quantity_input.$error.pattern">+</button>
+
+						<input type="text"
+							   name= "quantity_input"
+							   ng-model="product.amount"
+						  	   ng-pattern = "/^[0-9]{1,7}$/">
+
+						<button ng-click = "Ctrl.updateAmount('subtraction', product)"
+								ng-disabled = "product.amount <= 0 || quantity_form.quantity_input.$error.pattern">-</button>
+								
+						<span ng-show = "quantity_form.quantity_input.$error.pattern">Only Enter Numbers</span>
+					</form>
 				</div>
 			</div>	
 			<div>
