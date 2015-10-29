@@ -67,7 +67,7 @@ MainCtrl.prototype.cart = [];
 MainCtrl.prototype.addToCart = function(product){
   var index = findProduct(this.cart,product);
   
-  if(index == -1){
+  if(index == -1 && product.amount != 0){
     
     if(product.amount == undefined){
       product.amount = 1;
