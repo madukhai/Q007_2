@@ -21,7 +21,7 @@ header{
 	position: absolute;
 	top:-10px;
 	left:5px;
-	font-size: 4em;
+	font-size: 64px;
 	color: white;
 	font-family: Spectre;
 }
@@ -146,6 +146,14 @@ body{
 	background-color: rgba(255,255,255,0.8);
 }
 
+button.cart_button.nav:visited {
+	color: white;
+}
+
+button.cart_button.nav:focus {
+	color: white;
+}
+
 iframe{
 	position: absolute;
 	width:100%;
@@ -224,6 +232,10 @@ p.product-name{
 	border-radius: 0.5em;
 }
 
+.item p.product-details:hover {
+	text-decoration: underline;
+}
+
 .item .simple-details{
 	display: inline-block;
 	width: 180px;
@@ -243,19 +255,39 @@ p.product-name{
 
 /* footer styles*/
 
-.footer {
+footer {
 	background-color: black;
+	height: 100px;
+}
+
+footer p {
+	color: white;
 }
 
 /* end footer styles*/
 
 /**/
-.more-details{
-	background-color: rgba(255,255,255,0.8);
-	margin: 50px;
-}
-
 .thumb_image{
 	height:50px;
 	width:50px; 
 }
+
+/* product details button*/
+
+.more-details{
+	background-color: rgba(255,255,255,0.8);
+	margin: 50px;
+}
+.more-details .details-button {
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+	box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+
+}
+
+.more-details span.product-name{
+	font-size: 2em;
+}
+
+/* end product details button*/
+

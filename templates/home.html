@@ -40,22 +40,20 @@
 			<li class="item" ng-repeat="product in Ctrl.products
 										| filter: {category:Ctrl.categoryOption.categoryFilter}
 									    | filter: {name:Ctrl.search}"
-							 ng-show = 'product.status == "active"'
-							 >
+							 ng-show = 'product.status == "active"'>
 
-				<p ng-click="Ctrl.showMoreDetails(product)">details</p>
 				<p class="product-name">{{ product.name }}</p><br>
 				<div class="img-container">
 					<img ng-src="{{product.image}}" alt="product.name" class = "display_image" /><br>
 				</div>
-				
+				<p class="product-details" ng-click="Ctrl.showMoreDetails(product)">Click for product details</p>
 				<div class="simple-details">
 					<span class="price">Price: {{ product.price | currency}}</span>
 					<br>
 					<span class="category">Classified as: {{ product.category}}</span><br/>
 					<span class="quantity">Only {{ product.quantity}} left!</span>
 				</div>
-				<button ng-click="Ctrl.addToCart(product)">Add To</button>
+				<button ng-click="Ctrl.addToCart(product)">Add To Cart</button>
 			</li>
 		</ul>
 	</div>
@@ -63,10 +61,10 @@
 
 
 <footer>
-	<h3>footer</h3>
+	
 	<div class="ref-container container row">
 		<div class="references">
-			
+			<p>Maintained by Team $Q007#</p>
 		</div>
 		<div class="references">
 			
