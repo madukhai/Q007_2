@@ -52,8 +52,8 @@
 					<br>
 					<span class="category">Classified as: {{ product.category}}</span><br/>
 					<span class="quantity">Only {{ product.quantity}} left!</span>
+					<input type="number" maxlength="2" name="amount" ng-model="product.amount" placeholder="Qty"/>
 				</div>
-				<input name="amount" ng-model="product.amount" placeholder="amount"/>
 				<button ng-click="Ctrl.addToCart(product)">Add To Cart</button>
 			</li>
 		</ul>
