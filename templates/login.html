@@ -1,12 +1,29 @@
 
-<form ng-submit="Ctrl.authenticate(user,password)" class="login_form">
+<form ng-submit="Ctrl.authenticate(user,password)" class="login_form" name="frm">
 	<h1>
 		Admin Login
 	</h1>
 
 
-	<input type="text" placeholder="Email" ng-model="user">
-	<input type="password" placeholder="Password" ng-model="password">
+	<input 
+        type="email" 
+        placeholder="Email" 
+        ng-model="user"
+        name="user"
+        required/>
+    <span ng-messages="frm.user.$dirty && frm.user.$error" ng-messages-multiple>
+        <span ng-message="required">Your email is required.</span>
+        <span ng-message="email">Enter a proper email</span></span>
+
+	<input 
+        type="password"
+        placeholder="Password"
+        name="password" 
+        ng-model="password"
+        required/>
+    <span ng-messages="frm.password.$dirty && frm.password.$error"><span ng-message="required">You must enter your password.</span></span>
+        
+
 	<button>Login</button>
 	<button ng-click="Ctrl.close()">close</button>
 </form>

@@ -18,7 +18,10 @@ CheckOutCtrl.prototype.confirmOrder = function() {
 	// }
 
 	//communicate with service
-	
+	for(var i=0; i<this.order.cart.length;i++){
+		this.order.cart[i].quantity -= this.order.cart[i].amount;
+		this.order.cart[i].amount = 0;
+	}
 	this.OrderService.confirmOrder(this.order);
 
 	

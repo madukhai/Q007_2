@@ -5,7 +5,7 @@ function AuthCtrl(api,$location, $modalInstance){
 	this.$location = $location;
   this.$modalInstance = $modalInstance;
 }
-AuthCtrl.prototype.authenticate = function(username,password){
+AuthCtrl.prototype.authenticate = function(username, password){
 	var self = this;
 	var request_body = {
 		username:username,
@@ -19,6 +19,7 @@ AuthCtrl.prototype.authenticate = function(username,password){
       	//reset local storage data
       	localStorage.removeItem('products');
       	localStorage.setItem('authToken',response.data.authToken);
+        
       	self.$location.path('/admin');
       }
     },function(response){

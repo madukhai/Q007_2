@@ -19,6 +19,10 @@ section.adminContainer h1  {
     margin-top: 5px;
 }
 
+.adminContainer button {
+  color: black;
+}
+
 /*Nav Bar*/
 
 section.adminContainer .nav {

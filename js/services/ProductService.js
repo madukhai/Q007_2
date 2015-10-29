@@ -32,11 +32,11 @@ ProductService.prototype.getProducts = function(){
 	// if(this.products == null){
 		// console.log('3');
 		
-		return this.retrieveProducts().then(function(response){
-				self.setProducts(response.data.products);
-				// console.log(response.data.products);
-				return response.data.products;
-		   });
+	return this.retrieveProducts().then(function(response){
+			self.setProducts(response.data.products);
+			// console.log(response.data.products);
+			return response.data.products;
+	   });
 	// }
 	// else{
 	// 	var res;

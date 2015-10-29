@@ -1,13 +1,12 @@
 
 <div class="more-details">
-	<img ng-src="{{Ctrl.product.image}}" alt="product's image"/>
-
-	<span>{{Ctrl.product.name}}</span>
 	
+	<span class="product-name">{{Ctrl.product.name}}</span><br>
+	<img ng-src="{{Ctrl.product.image}}" alt="product's image"/><br>
 
-	<span>{{Ctrl.product.price}}</span>
+	<span>Price: {{Ctrl.product.price | currency}}</span><br>
 
-	<span>{{Ctrl.product.category}}</span>
+	<span>Classified as: {{Ctrl.product.category}}</span><br>
 	<p>{{Ctrl.product.description}}</p>
 
 
@@ -16,7 +15,7 @@
 
 
 
-	<button ng-click="Ctrl.close()">close</button>
+	<button class="details-button" ng-click="Ctrl.close()">close</button>
 </div>
 
 

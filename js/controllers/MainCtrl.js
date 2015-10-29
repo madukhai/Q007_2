@@ -5,9 +5,11 @@ function MainCtrl(productService, $uibModal,products){
 	this.productService = productService;
 	this.$uibModal = $uibModal;
 	this.products = products;
-  console.log(this.products);
+  
   this.curPage = 0;
   this.productsPerPage = 6;
+
+  this.curProductAmount = 0;
 
   this.categoryOptions = [
     {label: "All", categoryFilter: ""},
@@ -64,16 +66,16 @@ MainCtrl.prototype.cart = [];
 
 MainCtrl.prototype.addToCart = function(product){
   var index = findProduct(this.cart,product);
- 
+  
   if(index == -1){
-    product.amount = 1;
+    product.amount = this.curProductAmount;
     this.cart.push(product);
     
   }else{
-    this.cart[index].amount++;
+    this.cart[index].amount += this.curProductAmount;
     
   }
-
+  this.curProductAmount = 0;
 }
 
 MainCtrl.prototype.showMoreDetails = function(product){
@@ -90,9 +92,6 @@ MainCtrl.prototype.showMoreDetails = function(product){
   }
   this.modalInstance = this.$uibModal.open(options);
 }
-
-
-
 
 
 

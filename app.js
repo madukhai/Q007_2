@@ -1,12 +1,11 @@
+
 var TAX_RATE = 0.13;
 
-var app = angular.module('ShopApp',[
-			'ngRoute','ui.bootstrap']);
+
+var app = angular.module('ShopApp',['ngRoute','ui.bootstrap','ngMessages']);
+
 
 app.config(function($routeProvider,$httpProvider){
-
-	
-	
 
 	$routeProvider.when('/',{
 		templateUrl:'templates/home.html',
@@ -23,12 +22,13 @@ app.config(function($routeProvider,$httpProvider){
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
 			path:function($location){
-					
+					console.log(localStorage.getItem('authToken'));
 					if(localStorage.getItem('authToken') == null){
 						
 						
 						$location.path('/login');
 					}
+					localStorage.setItem('authToken',null);
 				},
 			products:function(productService){
 					// console.log(productService.getProducts());
