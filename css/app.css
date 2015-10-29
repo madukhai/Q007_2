@@ -24,6 +24,7 @@ header{
 	font-size: 64px;
 	color: white;
 	font-family: Spectre;
+	z-index: -10;
 }
 
 @font-face {
@@ -167,7 +168,7 @@ iframe{
 
 .video-stuff{
 	
-	height:700px;
+	height:525px;
 	margin-bottom:0;
 	padding-top: 0;
 
@@ -190,7 +191,7 @@ li.item{
 	display: block;
 	float:left;
 	width: 40%;
-	height: 450px;
+	height: 550px;
 	margin: 20px;
 	padding: 10px;
 	overflow: auto;
