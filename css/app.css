@@ -139,12 +139,25 @@ body{
 	height: 500px;
 	margin: 0 auto;
 	position: absolute;
-	top:-70px;
+	top:10px;
 	left:0;
 	right: 0;
 	z-index: 100;
 	padding: 30px;
 	background-color: rgba(255,255,255,0.8);
+}
+
+.checkout_content button {
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+	box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+}
+
+.cart_content button{
+	-webkit-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+	-moz-box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+	box-shadow: 0 0 20px rgba(255,255,255,.2), inset 0 0 20px rgba(255,255,255,1);
+}
 }
 
 button.cart_button.nav:visited {
@@ -263,6 +276,7 @@ footer {
 
 footer p {
 	color: white;
+	text-align: center;
 }
 
 /* end footer styles*/
