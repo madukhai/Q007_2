@@ -42,7 +42,7 @@ CartCtrl.prototype.close = function(){
 CartCtrl.prototype.order = {};
 CartCtrl.prototype.total = 0;
 CartCtrl.prototype.tax = 0;
-CartCtrl.prototype.finalTotal = 0;
+CartCtrl.prototype.final_total = 0;
 CartCtrl.prototype.upgradeCart = function(){
 	// add total,tax,final.
 	if(this.cart.length != 0){
