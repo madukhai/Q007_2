@@ -5,6 +5,12 @@ function CartCtrl($uibModal, $modalInstance,cart){
 	this.$modalInstance = $modalInstance;
 	this.cart = cart;
 	// console.log(this.cart);
+	
+
+	this.order = {};
+	this.total = 0;
+	this.tax = 0;
+	this.final_total = 0;
 	this.upgradeCart();
 }
 
@@ -12,7 +18,7 @@ function CartCtrl($uibModal, $modalInstance,cart){
 
 CartCtrl.prototype.checkOut = function(){
 	var self = this;
-	var self = this;
+
 	this.order = {
 		cart: self.cart,
 		total: self.total,
@@ -39,10 +45,9 @@ CartCtrl.prototype.close = function(){
 	this.$modalInstance.close();
 }
 
-CartCtrl.prototype.order = {};
-CartCtrl.prototype.total = 0;
-CartCtrl.prototype.tax = 0;
-CartCtrl.prototype.final_total = 0;
+
+
+
 CartCtrl.prototype.upgradeCart = function(){
 	// add total,tax,final.
 	if(this.cart.length != 0){
@@ -50,7 +55,19 @@ CartCtrl.prototype.upgradeCart = function(){
 		for(var i=0; i < this.cart.length; i++){
 			this.total += parseInt(this.cart[i].price)*this.cart[i].amount;
 		}
-		this.tax = this.total*0.13;
+		this.tax = this.total*TAX_RATE;
 		this.final_total = this.tax + this.total;
 	}
 }
+
+
+CartCtrl.prototype.updateAmount = function (procedure, product){
+	if (procedure == "addition"){
+		product.amount += 1;
+	}
+	if (procedure == "subtraction"){
+		product.amount -= 1;
+	}
+	this.upgradeCart();    
+}
+

@@ -1,3 +1,5 @@
+var TAX_RATE = 0.13;
+
 var app = angular.module('ShopApp',[
 			'ngRoute','ui.bootstrap']);
 

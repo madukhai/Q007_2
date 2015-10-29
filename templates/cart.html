@@ -3,14 +3,20 @@
 		<h1 ng-style="{'font-size':'6em','color':'white'}">Cart</h1>
 
 			<div ng-repeat="product in Ctrl.cart">
-
-				{{ product.name }}    {{product.amount}}   {{ product.price|currency }}  
-			</div>
+				<div>	
+					<strong>Item:</strong> {{ product.name }}   <strong>Quantity:</strong> {{product.amount}}
+					<strong>Price</strong>   {{ product.price|currency }}  
+				</div>
+				<div>
+					<button ng-click = "Ctrl.updateAmount('addition', product)">+</button>
+					<button ng-click = "Ctrl.updateAmount('subtraction', product)"
+							ng-disabled = "product.amount <= 0">-</button>
+				</div>
+			</div>	
 			<div>
-				total: {{ Ctrl.total |currency}}<br>
-				tax: {{ Ctrl.tax |currency}}<br>
-				final total: {{ Ctrl.final_total |currency}}
-
+				total: {{ Ctrl.total | currency}}<br>
+				tax: {{ Ctrl.tax | currency}}<br>
+				final total: {{ Ctrl.final_total | currency}}
 			</div>
 				
 		<button class="toCheckout" ng-click="Ctrl.checkOut()">Checkout</button>
