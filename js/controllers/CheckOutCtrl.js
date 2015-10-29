@@ -3,23 +3,22 @@ function CheckOutCtrl($modalInstance, order, OrderService){
 	this.$modalInstance = $modalInstance;
 	this.order = order;
 	this.OrderService = OrderService;
-	console.log(this.order);
 }
 
 
-CheckOutCtrl.prototype.confirmOrder = function(cart, total, tax, final_total) {
+CheckOutCtrl.prototype.confirmOrder = function() {
 
 	// send order to server;
-
-	var request_body = {
-		cart: cart,
-		total: total,
-		tax: tax,
-		final_total: final_total
-	}
+	// var self = this;
+	// var request_body = {
+	// 	cart: self.cart,
+	// 	total: self.total,
+	// 	tax: self.tax,
+	// 	final_total: self.final_total
+	// }
 
 	//communicate with service
-	this.OrderService.confirmOrder(request_body);
+	this.OrderService.confirmOrder(this.order);
 
 	
 	this.$modalInstance.close();

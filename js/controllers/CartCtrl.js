@@ -17,7 +17,7 @@ CartCtrl.prototype.checkOut = function(){
 		cart: self.cart,
 		total: self.total,
 		tax: self.tax,
-		finalTotal: self.finalTotal
+		final_total: self.final_total
 	}
 
   	var options = {
@@ -51,6 +51,6 @@ CartCtrl.prototype.upgradeCart = function(){
 			this.total += parseInt(this.cart[i].price)*this.cart[i].amount;
 		}
 		this.tax = this.total*0.13;
-		this.finalTotal = this.tax + this.total;
+		this.final_total = this.tax + this.total;
 	}
 }

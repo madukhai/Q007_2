@@ -2,7 +2,7 @@ app.service('OrderService', OrderService);
 
 function OrderService(api) {
 	this.api = api;
-	this.order = localStorage.getItem('order');
+	// this.order = localStorage.getItem('order');
 }
 
 OrderService.prototype.confirmOrder = function(order) {
@@ -28,7 +28,7 @@ OrderService.prototype.retrieveOrders = function(){
 	return this.api.request('/retrieve_orders/team3', {}, 'GET');
 }
 
-OrderService.prototype.getOrder = function(){
+OrderService.prototype.getOrders = function(){
 	var self = this;
 	//if there are no products stored in localStorage
 	//grab them from the API,store them in localStorage

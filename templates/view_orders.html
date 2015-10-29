@@ -2,11 +2,11 @@
     <div class="innerContainer">
             <h1 class="centreText">Store Admin Page</h1>
             <!-- <hr> -->
-            <nav class="nav">
+            <!-- <nav class="nav">
                 <ul>
                     <li><a href="/#/view_orders" ng-click="Ctrl.getOrder()">View Orders</a></li>
                 </ul>
-            </nav>
+            </nav> -->
     
             <!-- <hr> -->
     
@@ -20,7 +20,7 @@
                         <th><strong>Tax</strong></th>
                         <th><strong>Final Total</strong></th>
                     </tr>
-                    <tr ng-repeat="order in Ctrl.order">
+                    <tr ng-repeat="order in Ctrl.orders">
                         <td>{{order.orderId}}</td>
                         <!-- <td><ul><li ng-repeat="item in order.cart">{{item}}</li></ul>ul</td> -->
                         <td>{{order.total}}</td>

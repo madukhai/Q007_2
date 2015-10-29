@@ -39,9 +39,9 @@
 										| filter: {category:Ctrl.categoryOption.categoryFilter}
 									    | filter: {name:Ctrl.search}"
 							 ng-show = 'product.status == "active"'
-							 ng-click="Ctrl.showMoreDetails(product)">
+							 >
 
-
+				<p ng-click="Ctrl.showMoreDetails(product)">details</p>
 				<p class="product-name">{{ product.name }}</p><br>
 				<div class="img-container">
 					<img ng-src="{{product.image}}" alt="product.name" class = "display_image" /><br>
