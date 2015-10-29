@@ -10,7 +10,7 @@
 				<div>
 					<strong>Quantity:</strong>
 					<button ng-click = "Ctrl.updateAmount('addition', product)">+</button>
-					<input type="text" ng-model="product.amount">{{product.amount}}
+					<input type="text" ng-model="product.amount">
 					<button ng-click = "Ctrl.updateAmount('subtraction', product)"
 							ng-disabled = "product.amount <= 0">-</button>
 				</div>
