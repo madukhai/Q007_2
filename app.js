@@ -44,8 +44,8 @@ app.config(function($routeProvider,$httpProvider){
 		templateUrl:'templates/view_orders.html',
 		controller:'ViewOrderCtrl as Ctrl',
 		resolve:{
-			order:function(OrderService){
-				return OrderService.getOrder();
+			orders:function(OrderService){
+				return OrderService.getOrders();
 			}
 		}
 	})

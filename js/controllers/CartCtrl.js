@@ -17,7 +17,7 @@ CartCtrl.prototype.checkOut = function(){
 		cart: self.cart,
 		total: self.total,
 		tax: self.tax,
-		finalTotal: self.finalTotal
+		final_total: self.final_total
 	}
 
   	var options = {
@@ -42,7 +42,7 @@ CartCtrl.prototype.close = function(){
 CartCtrl.prototype.order = {};
 CartCtrl.prototype.total = 0;
 CartCtrl.prototype.tax = 0;
-CartCtrl.prototype.finalTotal = 0;
+CartCtrl.prototype.final_total = 0;
 CartCtrl.prototype.upgradeCart = function(){
 	// add total,tax,final.
 	if(this.cart.length != 0){
@@ -51,6 +51,6 @@ CartCtrl.prototype.upgradeCart = function(){
 			this.total += parseInt(this.cart[i].price)*this.cart[i].amount;
 		}
 		this.tax = this.total*0.13;
-		this.finalTotal = this.tax + this.total;
+		this.final_total = this.tax + this.total;
 	}
 }

@@ -1,16 +1,16 @@
 app.controller('ViewOrderCtrl', ViewOrderCtrl);
 
-function ViewOrderCtrl(OrderService,$location,$routeParams,order){
+function ViewOrderCtrl(OrderService,$location,$routeParams,orders){
     this.location = $location;
     this.orderId = $routeParams.orderId;
     this.orderService = OrderService;
-    this.order = order;
-    // this.getOrder();
+    this.orders = orders;
+    
 }
 
 
 ViewOrderCtrl.prototype.getOrder = function(){
-	this.order = this.orderService.getOrder();
+	this.orders = this.orderService.getOrders();
 }
 
 
