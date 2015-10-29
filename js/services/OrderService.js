@@ -8,6 +8,7 @@ function OrderService(api) {
 OrderService.prototype.confirmOrder = function(order) {
 	// Recording an order to the backend via api
 	// return an order
+
 	return this.api.request('/record_order', order, 'POST')
 	.then(function(response){
 		// console.log(response);
@@ -35,7 +36,7 @@ OrderService.prototype.getOrders = function(){
 	//and pass back the products as a promise
 	// if(this.order == null){
 		return this.retrieveOrders().then(function(response){
-				console.log(response);
+				
 				self.setOrder(response.data.orders);
 				
 				return response.data.orders;

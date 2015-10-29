@@ -19,6 +19,7 @@
                         <th><strong>Total</strong></th>
                         <th><strong>Tax</strong></th>
                         <th><strong>Final Total</strong></th>
+                        <th><strong>showdetails</strong></th>
                     </tr>
                     <tr ng-repeat="order in Ctrl.orders">
                         <td>{{order.orderId}}</td>
@@ -26,6 +27,8 @@
                         <td>{{order.total}}</td>
                         <td>{{order.tax}}</td>
                         <td>{{order.final_total}}</td>
+                        <td><a ng-href="/#/view_orders/:{{order.orderId}}">more details</td>
+                        
                     </tr>
                 </thead>
     
