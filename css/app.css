@@ -22,7 +22,7 @@ header{
 	top:10px;
 	left:20px;
 	font-size: 2em;
-	color:rgb(255,255,255,);
+	color: white;
 	font-family: italic;
 }
 .form-group{
@@ -160,8 +160,10 @@ li.item{
 
 
 iframe{
+	position: absolute;
 	width:100%;
 	height: 120%;
+	top:-150px;
 	z-index: -1000;
 	right:0;
 	left:0;
@@ -170,9 +172,10 @@ iframe{
 
 
 .video-stuff{
-	height:650px;
+	
+	height:700px;
 	margin-bottom:0;
-	overflow:hidden;
+	padding-top: 0;
 
 }
 .main{
@@ -181,7 +184,7 @@ iframe{
 /**/
 .cover_ads{
 	position:relative;
-	top: 80%;
+	top: 95%;
 	width: 100%;
 	height: 500px;
 	background-color: black;

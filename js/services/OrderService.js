@@ -23,7 +23,7 @@ OrderService.prototype.setOrder = function(order){
 	localStorage.setItem('order',this.order);
 }
 
-OrderService.prototype.retrieveOrder = function(){
+OrderService.prototype.retrieveOrders = function(){
 	var self = this;
 	return this.api.request('/retrieve_orders/team3', {}, 'GET');
 }
@@ -33,21 +33,21 @@ OrderService.prototype.getOrder = function(){
 	//if there are no products stored in localStorage
 	//grab them from the API,store them in localStorage
 	//and pass back the products as a promise
-	if(this.order == null){
-		return this.retrieveOrder().then(function(response){
+	// if(this.order == null){
+		return this.retrieveOrders().then(function(response){
 				console.log(response);
-				self.setOrder(response.data.order);
+				self.setOrder(response.data.orders);
 				
-				return response.data.order;
+				return response.data.orders;
 		   });
-	}
-	else{
-		if(typeof self.order === 'string'){
-			console.log(self.order);
-			return JSON.parse(self.order);
-		}
-		else{
-			return self.order;
-		}
-	}
+	// }
+	// else{
+	// 	if(typeof self.order === 'string'){
+	// 		console.log(self.order);
+	// 		return JSON.parse(self.order);
+	// 	}
+	// 	else{
+	// 		return self.order;
+	// 	}
+	// }
 }

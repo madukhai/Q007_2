@@ -42,7 +42,12 @@ app.config(function($routeProvider,$httpProvider){
 
 	.when('/view_orders',{
 		templateUrl:'templates/view_orders.html',
-		controller:'ViewOrderCtrl as Ctrl'
+		controller:'ViewOrderCtrl as Ctrl',
+		resolve:{
+			order:function(OrderService){
+				return OrderService.getOrder();
+			}
+		}
 	})
 
     .when('/edit_product/:productId',{
