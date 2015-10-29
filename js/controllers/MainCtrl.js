@@ -9,7 +9,7 @@ function MainCtrl(productService, $uibModal,products){
   this.curPage = 0;
   this.productsPerPage = 6;
 
-  this.curProductAmount = 0;
+  
 
   this.categoryOptions = [
     {label: "All", categoryFilter: ""},
@@ -68,14 +68,17 @@ MainCtrl.prototype.addToCart = function(product){
   var index = findProduct(this.cart,product);
   
   if(index == -1){
-    product.amount = this.curProductAmount;
+    
+    if(product.amount == undefined){
+      product.amount = 1;
+    }
+    
     this.cart.push(product);
     
   }else{
-    this.cart[index].amount += this.curProductAmount;
-    
+    this.cart[index].amount += product.amount;
   }
-  this.curProductAmount = 0;
+  
 }
 
 MainCtrl.prototype.showMoreDetails = function(product){
