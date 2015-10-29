@@ -82,8 +82,9 @@ ProductService.prototype.editProduct = function(product,id){
 	console.log(product);
 	console.log(id);
 	var self = this;
-    return this.api.request('/editproduct/' + id,product,'POST')
+    return this.api.request('/editproduct/' + id, product,'POST')
     .then(function(response){
+    	// self.getProducts()
     	// var index;
     	// for(var i=0; i<self.products.length;i++){
     	// 	if(self.products[i].productId == id){
@@ -95,7 +96,7 @@ ProductService.prototype.editProduct = function(product,id){
 
     	// self.setProducts(self.products);
 
-    	// console.log(self.products);
+    	console.log(self.products);
 
         console.log(response);
     });

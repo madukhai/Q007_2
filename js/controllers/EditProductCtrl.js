@@ -18,23 +18,21 @@ function EditProductCtrl(productService,$location,$routeParams,products){
 }
 
 EditProductCtrl.prototype.getProduct = function() {
-    var path_array = this.location.path().split('/');
-    var id = path_array[path_array.length - 1];
-    console.log(id);
+    
     for(var i=0;i<this.products.length;i++){
-        if(this.products[i].productId == id){
+        if(this.products[i].productId == this.productId){
             return this.products[i];
         }
     }
-  return this.products.filter(function(product) {
-    return product.productId === id})[0];
+  // return this.products.filter(function(product) {
+  //   return product.productId === id})[0];
   //loops through the entire localStorage.products array. It then puts all the objects into a new array that fit the requirements that equal the 'id'. This will only ever return one object. the [0] sercurity buffer. If more than one product has the same id, it will only put the first product with the id into the array.
 }
 
 EditProductCtrl.prototype.editProduct = function(){
     var self = this;
     
-    console.log(this.product.image);
+    // console.log(this.product.image);
     var request_body = {
         name:this.product.name,
         description:this.product.description,

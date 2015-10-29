@@ -22,16 +22,16 @@ app.config(function($routeProvider,$httpProvider){
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
 			path:function($location){
-					console.log(localStorage.getItem('authToken'));
+					// console.log(localStorage.getItem('authToken'));
 					if(localStorage.getItem('authToken') == null){
 						
 						
 						$location.path('/login');
 					}
-					localStorage.setItem('authToken',null);
+					
 				},
 			products:function(productService){
-					// console.log(productService.getProducts());
+					console.log(productService.getProducts());
 
 					return productService.getProducts();
 				}
