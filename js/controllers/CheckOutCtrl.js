@@ -18,6 +18,7 @@ CheckOutCtrl.prototype.confirmOrder = function() {
 	// }
 
 	//communicate with service
+	
 	this.OrderService.confirmOrder(this.order);
 
 	

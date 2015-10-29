@@ -1,0 +1,22 @@
+<div class="orderDetails">
+	<ul>
+	
+		<li ng-repeat="product in Ctrl.cart">
+			{{product.name}}
+			{{product.description}}
+			{{product.amount}}
+			{{product.price}}
+			{{product.category}}
+		</li>
+		<li>
+			total: {{ Ctrl.order.total}}
+		</li>
+		<li>
+			tax: {{Ctrl.order.tax}}
+		</li>
+		<li>
+			final_total: {{Ctrl.order.final_total}}
+		</li>
+	</ul>
+	<button ng-click="Ctrl.goBack()">back to view orders</button>
+</div>

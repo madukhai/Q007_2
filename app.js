@@ -51,7 +51,15 @@ app.config(function($routeProvider,$httpProvider){
 			}
 		}
 	})
-
+	.when('/view_orders/:OrderId',{
+		templateUrl:'templates/view_order_details.html',
+		controller: 'ViewOrderDetailsCtrl as Ctrl',
+		resolve:{
+			orders:function(OrderService){
+				return OrderService.getOrders();
+			}
+		}
+	})
     .when('/edit_product/:productId',{
         templateUrl:'templates/edit_product.html',
         controller: 'EditProductCtrl as Ctrl',

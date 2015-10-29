@@ -50,10 +50,10 @@
 				</div>
 				
 				<div class="simple-details">
-					<span class="price">{{ product.price | currency}}</span>
+					<span class="price">Price: {{ product.price | currency}}</span>
 					<br>
-					<span class="category">catagory: {{ product.category}}</span>
-					<span class="quantity">{{ product.quantity}} left!</span>
+					<span class="category">Classified as: {{ product.category}}</span><br/>
+					<span class="quantity">Only {{ product.quantity}} left!</span>
 				</div>
 				<button ng-click="Ctrl.addToCart(product)">Add To</button>
 			</li>
@@ -61,7 +61,7 @@
 	</div>
 </main>
 
-<
+
 <footer>
 	<h3>footer</h3>
 	<div class="ref-container container row">
