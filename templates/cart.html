@@ -10,15 +10,15 @@
 				<div>
 					<strong>Quantity:</strong>
 					<button ng-click = "Ctrl.updateAmount('addition', product)">+</button>
-					<input type="text" ng-model="product.amount">
+					<input type="number" ng-model="product.amount">
 					<button ng-click = "Ctrl.updateAmount('subtraction', product)"
 							ng-disabled = "product.amount <= 0">-</button>
 				</div>
 			</div>	
 			<div>
-				total: {{ Ctrl.total | currency}}<br>
-				tax: {{ Ctrl.tax | currency}}<br>
-				final total: {{ Ctrl.final_total | currency}}
+				total: {{ Ctrl.total | currency }}<br>
+				tax: {{ Ctrl.tax | currency }}<br>
+				final total: {{ Ctrl.final_total | currency }}
 			</div>
 				
 		<button class="toCheckout" ng-click="Ctrl.checkOut()">Checkout</button>
