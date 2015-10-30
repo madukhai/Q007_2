@@ -2,11 +2,11 @@
 	<ul>
 	
 		<li ng-repeat="product in Ctrl.cart">
-			{{product.name}}
-			{{product.description}}
-			{{product.amount}}
-			{{product.price | currency}}
-			{{product.category}}
+			Product Name: {{product.name}}<br>
+			Product Description: {{product.description}}<br>
+			Amount : {{product.amount}}    <br>
+			price: {{product.price | currency}}
+			category: {{product.category}}
 		</li>
 		<li>
 			total: {{ Ctrl.order.total | currency}}

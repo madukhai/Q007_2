@@ -43,7 +43,7 @@ EditProductCtrl.prototype.editProduct = function(){
         image:this.product.image
     }
     
-    console.log(request_body);
+    // console.log(request_body);
     // console.log(this.productId);
     this.productService.editProduct(request_body, this.productId);
     // this.products = this.productService.getProducts();

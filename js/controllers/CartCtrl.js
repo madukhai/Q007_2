@@ -11,7 +11,12 @@ function CartCtrl($uibModal, $modalInstance,cart){
 	this.total = 0;
 	this.tax = 0;
 	this.final_total = 0;
+<<<<<<< HEAD
 	this.updateCart();
+=======
+	this.upgradeCart();
+	
+>>>>>>> ba0bc3f18831b98d0afe0910ad981b287ff12e48
 }
 
 
@@ -36,6 +41,13 @@ CartCtrl.prototype.checkOut = function(){
 	    	}
 	    }
   	}
+  	// reset cart;
+  	this.cart = [];
+  	this.total = 0;
+  	this.tax = 0;
+  	this.final_total = 0;
+
+
 
   	this.$modalInstance.close();
   	this.modalInstance = this.$uibModal.open(options);
@@ -70,4 +82,7 @@ CartCtrl.prototype.updateAmount = function (procedure, product){
 	}
 	this.updateCart();    
 }
+
+
+
 
