@@ -7,5 +7,7 @@ function ViewOrderCtrl(OrderService,$location,$routeParams,orders){
     this.orders = orders;
     
 }
-
+ViewOrderCtrl.prototype.goBack = function(){
+	this.location.path('/admin');
+}
 
