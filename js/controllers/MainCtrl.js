@@ -5,10 +5,9 @@ function MainCtrl(productService, $uibModal,products){
 	this.productService = productService;
 	this.$uibModal = $uibModal;
 	this.products = products;
-  
+  console.log(this.products);
   this.curPage = 0;
   this.productsPerPage = 6;
-
   
 
   this.categoryOptions = [
@@ -48,6 +47,7 @@ MainCtrl.prototype.openLogin = function(){
 
 MainCtrl.prototype.openCart = function(){
   var self = this;
+  self.clearCart();
   var options = {
     animation:true,
     templateUrl: 'templates/cart.html',
@@ -58,6 +58,7 @@ MainCtrl.prototype.openCart = function(){
       }
     }
   }
+
   this.modalInstance = this.$uibModal.open(options);
 
 }
@@ -80,6 +81,18 @@ MainCtrl.prototype.addToCart = function(product){
   }
   
 }
+
+MainCtrl.prototype.clearCart = function(){
+    var new_cart = []
+    for(var i=0;i<this.cart.length;i++){
+      if(this.cart[i].amount > 0){
+        new_cart.push(this.cart[i]);
+      }
+    }
+    this.cart = new_cart;
+  }
+
+
 
 MainCtrl.prototype.showMoreDetails = function(product){
   
@@ -130,8 +143,7 @@ function back_setting(){
 
   var container = angular.element('body').context.children[0].children[1].children[0].children[0];
 
- 
-
+  
 
 
   
