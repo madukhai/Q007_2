@@ -5,17 +5,17 @@
 			{{product.name}}
 			{{product.description}}
 			{{product.amount}}
-			{{product.price}}
+			{{product.price | currency}}
 			{{product.category}}
 		</li>
 		<li>
-			total: {{ Ctrl.order.total}}
+			total: {{ Ctrl.order.total | currency}}
 		</li>
 		<li>
-			tax: {{Ctrl.order.tax}}
+			tax: {{Ctrl.order.tax | currency}}
 		</li>
 		<li>
-			final_total: {{Ctrl.order.final_total}}
+			final_total: {{Ctrl.order.final_total | currency}}
 		</li>
 	</ul>
 	<button ng-click="Ctrl.goBack()">back to view orders</button>
