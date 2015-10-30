@@ -14,7 +14,7 @@ function EditProductCtrl(productService,$location,$routeParams,products){
     // console.log(this.productId);
     this.product = this.getProduct();
     console.log(this.product);
-
+    this.changeMade = false;
 }
 
 EditProductCtrl.prototype.getProduct = function() {
@@ -51,6 +51,9 @@ EditProductCtrl.prototype.editProduct = function(){
 
     // .then(self.productService.getProducts());
 
-    this.location.path('/admin');
+    
+    this.changeMade = true;
 }
+
+
 

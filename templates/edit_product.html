@@ -4,8 +4,8 @@
             Edit Product
         </h1>
         
-        <form ng-submit="Ctrl.editProduct()">
-            <article class="row">
+        <form>
+            <article class="row" ng-init = "Ctrl.changeMade = false">
                 <section class="twelve columns">
                     <label for="name">Name: {{Ctrl.product.name}}:</label>
                     <input id="name" class="u-full-width" type="text" ng-model="Ctrl.product.name">
@@ -22,7 +22,7 @@
                     <label for="category">Category: {{Ctrl.product.category}}</label>
                     <input id="category" type="text" ng-model="Ctrl.product.category">
                     <label for="quantity">Quantity: {{Ctrl.product.quantity}}</label>
-                    <input id="quantity" type="text" ng-model="Ctrl.product.quantity">
+                    <input id="quantity" type="number" min = "0" ng-model="Ctrl.product.quantity">
                     <label for="status">Status: {{Ctrl.product.status}}</label>
                     <select id="status" ng-model="Ctrl.product.status">
                             <option value="" selected>Status</option>
@@ -31,11 +31,13 @@
                     </select>
                 </section>
                <!--  <section > -->
-                    <button class="button">Make Changes</button>
-                     <!-- <section class="button"><a href="#/admin">Admin</a></section> -->
-                    <!-- </section> -->
+                    <button class="button" ng-click="Ctrl.editProduct()">Make Changes</button>
+                    <span ng-show = "Ctrl.changeMade">Changes Saved</span>
+
                 </article>
             </form>
+                <a href = '#/admin'><button class="button">Go Home</button></a>
+
         </div>
     <!-- end container -->
     </section>

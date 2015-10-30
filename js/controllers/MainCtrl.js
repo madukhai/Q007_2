@@ -6,14 +6,12 @@ function MainCtrl(productService, $uibModal,products){
 	this.$uibModal = $uibModal;
 	this.products = products;
   
-  this.curPage = 0;
-  this.productsPerPage = 6;
 
   
 
   this.categoryOptions = [
     {label: "All", categoryFilter: ""},
-    {label: "Weapons", categoryFilter : "Weapons"},
+    {label: "Weapons", categoryFilter : "Weapon"},
     {label: "Concealables", categoryFilter : "Undercover"},
     {label: "Vehicles", categoryFilter : "Vehicle"}
   ]
@@ -29,9 +27,6 @@ MainCtrl.prototype.getVideoHeight = function (){
 	return angular.element(video)[0].clientHeight;
 }
 
-MainCtrl.prototype.getNumPages = function(){
-  return Math.ceil(this.products.length/this.productsPerPage);
-}
 
 MainCtrl.prototype.openLogin = function(){
 	var self = this;

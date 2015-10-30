@@ -11,7 +11,7 @@ function CartCtrl($uibModal, $modalInstance,cart){
 	this.total = 0;
 	this.tax = 0;
 	this.final_total = 0;
-	this.upgradeCart();
+	this.updateCart();
 }
 
 
@@ -48,7 +48,7 @@ CartCtrl.prototype.close = function(){
 
 
 
-CartCtrl.prototype.upgradeCart = function(){
+CartCtrl.prototype.updateCart = function(){
 	// add total,tax,final.
 	if(this.cart.length != 0){
 		this.total = 0;
@@ -68,6 +68,6 @@ CartCtrl.prototype.updateAmount = function (procedure, product){
 	if (procedure == "subtraction"){
 		product.amount -= 1;
 	}
-	this.upgradeCart();    
+	this.updateCart();    
 }
 
