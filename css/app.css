@@ -12,11 +12,32 @@ header{
 	/*background-color: rgb(170,170,190);*/
 	background-color: black;
 }
-.nav{
+
+/* Michael's Nav Bar */
+
+	/*Bootstrap Over-ride*/
+	
+	.navbar-default {
+		width: 100%;
+		position: fixed;
+		background-color: black;
+		border-color: black;
+	}
+
+	/*Site Tile CSS*/
+	.newSiteTitle {
+		color: white;
+		font-size: 2em;
+		font-family: Spectre;
+	}
+
+
+
+/*.nav{
 	float:right;
 	
 	margin-right: 30px;
-}
+}*/
 .sitetitle{
 	position: absolute;
 	top:-10px;
