@@ -64,13 +64,15 @@
 					<img ng-src="{{product.image}}" alt="product.name" class = "display_image" /><br>
 				</div>
 				<p class="product-details" ng-click="Ctrl.showMoreDetails(product)">Click for product details</p>
+
 				<div class="simple-details">
 					<span class="price">Price: {{ product.price | currency}}</span>
 					<br>
 					<span class="category">Classified as: {{ product.category}}</span><br/>
-					<input type="number" min="0" max="{{product.quantity}}" ng-style="{ width:'70px'}" name="amount" ng-model="product.amount" placeholder="Qty"/>
+					<input type="number" min="0" max="{{product.quantity}}" ng-style="{ width:'70px'}" name="amount" ng-model="product.amount" placeholder="Qty" ng-if="product.quantity >0"/>
 				</div>
-				<button ng-click="Ctrl.addToCart(product)">Add To Cart</button>
+				<button ng-click="Ctrl.addToCart(product)" ng-if="product.quantity >0">Add To Cart</button>
+				<p ng-if="product.quantity <=0">sold</p>
 			</li>
 		</ul>
 	</div>
