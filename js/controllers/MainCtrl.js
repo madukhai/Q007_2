@@ -48,6 +48,9 @@ MainCtrl.prototype.openCart = function(){
     resolve: {
       cart: function(){
          return self.cart;
+      },
+      products: function(productService){
+        return productService.getProducts();
       }
     }
   }
@@ -102,7 +105,13 @@ MainCtrl.prototype.showMoreDetails = function(product){
   this.modalInstance = this.$uibModal.open(options);
 }
 
-
+MainCtrl.prototype.getTotalStock = function(id){
+  for(var i=0;i<this.products.length;i++){
+        if(this.products[i].productId == id){
+            return this.products[i].quantity;
+        }
+    }
+}
 
 function findProduct(cart, product){
  

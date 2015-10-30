@@ -51,7 +51,7 @@
 					<span class="price">Price: {{ product.price | currency}}</span>
 					<br>
 					<span class="category">Classified as: {{ product.category}}</span><br/>
-					<input type="number" min="0" max="{{product.quantity}}" ng-style="{ width:'70px'}" name="amount" ng-model="product.amount" placeholder="Qty"/>
+					<input type="number" min="0" max="Ctrl.getTotalStock(product.productId)" ng-style="{ width:'70px'}" name="amount" ng-model="product.amount" placeholder="Qty"/>
 				</div>
 				<button ng-click="Ctrl.addToCart(product)">Add To Cart</button>
 			</li>

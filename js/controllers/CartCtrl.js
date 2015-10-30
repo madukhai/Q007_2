@@ -1,22 +1,22 @@
 app.controller('CartCtrl',CartCtrl);
 
-function CartCtrl($uibModal, $modalInstance,cart){
+function CartCtrl($uibModal, $modalInstance,cart, products){
 	this.$uibModal = $uibModal;
 	this.$modalInstance = $modalInstance;
 	this.cart = cart;
+	this.products = products;
+	//this.products = products;
 	// console.log(this.cart);
+	
 	
 
 	this.order = {};
 	this.total = 0;
 	this.tax = 0;
 	this.final_total = 0;
-<<<<<<< HEAD
+
 	this.updateCart();
-=======
-	this.upgradeCart();
-	
->>>>>>> ba0bc3f18831b98d0afe0910ad981b287ff12e48
+
 }
 
 
@@ -84,5 +84,11 @@ CartCtrl.prototype.updateAmount = function (procedure, product){
 }
 
 
-
+CartCtrl.prototype.getTotalStock = function(id){
+	for(var i=0;i<this.products.length;i++){
+        if(this.products[i].productId == id){
+            return this.products[i].quantity;
+        }
+    }
+}
 

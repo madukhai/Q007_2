@@ -15,15 +15,14 @@
 								ng-disabled = "product.amount <= 0">-</button>
 
 						<input type="number"
-							   name= "quantity_input"
 							   min = "0"
-							   max = "product.quantity"
+							   max = "Ctrl.getTotalStock(product.productId)"
 							   ng-model="product.amount"
 						  	   ng-change = "Ctrl.updateCart()">
 
 						<button 
 							ng-click = "Ctrl.updateAmount('addition', product)"
-							ng-disabled = "product.amount >= product.quantity">+</button>
+							ng-disabled = "product.amount >= Ctrl.getTotalStock(product.productId)">+</button>
 
 								
 						
