@@ -31,7 +31,9 @@ header{
 		font-family: Spectre;
 	}
 
-
+.nav{
+	padding:0 10px;
+}
 
 /*.nav{
 	float:right;
