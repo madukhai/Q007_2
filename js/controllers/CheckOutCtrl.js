@@ -34,7 +34,7 @@ CheckOutCtrl.prototype.confirmOrder = function() {
         status:this.order.cart[i].status,
         image:this.order.cart[i].image
     }
-		// console.log(this.productService.getProducts());
+		console.log(request_body);
 		this.productService.editProduct(request_body, this.order.cart[i].productId);
 		// console.log(this.productService.getProducts());
 	}

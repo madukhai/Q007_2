@@ -12,11 +12,34 @@ header{
 	/*background-color: rgb(170,170,190);*/
 	background-color: black;
 }
+
+/* Michael's Nav Bar */
+
+	/*Bootstrap Over-ride*/
+	
+	.navbar-default {
+		width: 100%;
+		position: fixed;
+		background-color: black;
+		border-color: black;
+	}
+
+	/*Site Tile CSS*/
+	.newSiteTitle {
+		color: white;
+		font-size: 2em;
+		font-family: Spectre;
+	}
+
 .nav{
+	padding:0 10px;
+}
+
+/*.nav{
 	float:right;
 	
 	margin-right: 30px;
-}
+}*/
 .sitetitle{
 	position: absolute;
 	top:-10px;
@@ -114,6 +137,7 @@ body{
 	width:100%;
 	height:100vh;
 	background-color: rgba(0,0,0,0.7);
+
 	
 }
 
@@ -145,6 +169,7 @@ body{
 	z-index: 100;
 	padding: 30px;
 	background-color: rgba(255,255,255,0.8);
+	overflow-y: scroll;
 }
 
 .checkout_content button {
