@@ -79,15 +79,6 @@ CartCtrl.prototype.updateAmount = function (procedure, product){
 	this.upgradeCart();    
 }
 
-CartCtrl.prototype.clearCart = function(){
-	var new_cart = []
-	for(var i=0;i<this.cart.length;i++){
-		if(this.cart[i].amount > 0){
-			new_cart.push(this.cart[i]);
-		}
-	}
-	this.cart = new_cart;
-}
 
 
 

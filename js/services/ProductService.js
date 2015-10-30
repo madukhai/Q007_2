@@ -96,7 +96,7 @@ ProductService.prototype.editProduct = function(product,id){
 
     	// self.setProducts(self.products);
 
-    	console.log(self.products);
+    	console.log(self.getProducts());
 
         console.log(response);
     });
